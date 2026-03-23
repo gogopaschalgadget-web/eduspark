@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - EduSpark</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .plan {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+            transition: all 0.3s;
+        }
+        .plan:hover {
+            transform: translateY(-10px);
+        }
+        .plan.featured {
+            border: 3px solid #667eea;
+            transform: scale(1.05);
+        }
+        .badge {
+            position: absolute;
+            top: -15px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .plan h3 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 2.5em;
+            color: #667eea;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .price span {
+            font-size: 0.5em;
+            color: #999;
+        }
+        .plan ul {
+            list-style: none;
+            margin: 30px 0;
+        }
+        .plan li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            color: #666;
+        }
+        .plan li:before {
+            content: "✓ ";
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .btn-signup {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        .btn-signup:hover {
+            transform: scale(1.02);
+        }
+        .faq {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-top: 60px;
+        }
+        .faq h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        .faq-item h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .faq-item p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simple, Transparent Pricing</h1>
+            <p>Choose the plan that's right for your family or classroom</p>
+        </header>
+
+        <div class="pricing-grid">
+            <div class="plan">
+                <h3>Free</h3>
+                <p style="color: #999; margin: 10px 0;">Great for trying it out</p>
+                <div class="price">$0 <span>/month</span></div>
+                <ul>
+                    <li>Access to all games (limited to 1 per subject per day)</li>
+                    <li>3 free worksheets per day</li>
+                    <li>3 free lesson plans per day</li>
+                    <li>Basic student progress tracking</li>
+                    <li>Community support</li>
+                </ul>
+                <button class="btn-signup">Start Free Now</button>
+            </div>
+
+            <div class="plan featured">
+                <div class="badge">Most Popular</div>
+                <h3>Premium</h3>
+                <p style="color: #999; margin: 10px 0;">For serious learners</p>
+                <div class="price">$4.99 <span>/month</span></div>
+                <ul>
+                    <li>✓ Unlimited access to all games</li>
+                    <li>✓ Unlimited worksheets & lesson plans</li>
+                    <li>✓ Advanced progress tracking</li>
+                    <li>✓ No ads</li>
+                    <li>✓ Detailed learning reports</li>
+                    <li>✓ Email support</li>
+                </ul>
+                <button class="btn-signup">Start 7-Day Free Trial</button>
+            </div>
+
+            <div class="plan">
+                <h3>Annual</h3>
+                <p style="color: #999; margin: 10px 0;">Best value</p>
+                <div class="price">$39.99 <span>/year</span></div>
+                <p style="color: #4caf50; font-weight: bold; text-align: center; margin: 10px 0;">Save 33%!</p>
+                <ul>
+                    <li>✓ Everything in Premium</li>
+                    <li>✓ One year commitment</li>
+                    <li>✓ Money-back guarantee</li>
+                    <li>✓ Priority support</li>
+                    <li>✓ Exclusive new games first</li>
+                </ul>
+                <button class="btn-signup">Get Annual Plan</button>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2>❓ Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h4>Is my child's data safe?</h4>
+                <p>Yes! EduSpark is COPPA-compliant. We don't collect or track any personal information from children. We never sell or share data.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can I cancel anytime?</h4>
+                <p>Yes. Premium and Annual plans can be cancelled anytime. No hidden fees or long-term contracts.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Do you offer classroom licenses?</h4>
+                <p>Yes! Contact us for special pricing for schools and classrooms. We offer volume discounts.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What subjects and grades are available?</h4>
+                <p>We have games for K-8 covering Math, Reading, Science, Spelling, Geography, and History.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

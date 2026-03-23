@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 5 Games - EduSpark</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .game-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .game-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .game-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .btn-play {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #4caf50;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        .btn-play:hover {
+            background: #45a049;
+        }
+        .back-link {
+            display: inline-block;
+            background: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            color: #667eea;
+            text-decoration: none;
+            margin-bottom: 40px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Home</a>
+
+        <header>
+            <h1>Grade 5 Learning Games</h1>
+            <p>Fun and educational games to practice 5th grade skills</p>
+        </header>
+
+        <div class="games-grid">
+            
+        <div class="game-card">
+            <div class="game-icon">🎮</div>
+            <h3>5th Grade Science</h3>
+            <p>Science</p>
+            <a href="/games/science_5_quiz.html" class="btn-play">Play Now →</a>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

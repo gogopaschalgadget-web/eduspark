@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flashcard study tool for math grade 1">
+    <meta name="keywords" content="math, 1, educational game, learning, kids, interactive">
+    <title>1st Grade Math Flashcards - EduSpark</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalApplication",
+        "name": "1st Grade Math Flashcards",
+        "description": "Flashcard study tool for math grade 1",
+        "educationalLevel": "Grade 1",
+        "audience": {"@type": "EducationalAudience", "educationalRole": "student"},
+        "learningResourceType": "Interactive Game"
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
+            background: #f5f5f5;
+        }
+        .nav {
+            background: #333;
+            padding: 15px;
+            text-align: center;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        .nav a:hover { color: #667eea; }
+        .ad-banner {
+            background: white;
+            padding: 15px;
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+            border-bottom: 1px solid #ddd;
+        }
+        .game-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .game-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .game-header h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        .game-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+        .game-content {
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin: 20px;
+            background: white;
+        }
+        .footer {
+            background: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="/">← Back to 1st Grade Math Flashcards</a>
+    </div>
+
+    <div class="ad-banner">
+        [Sponsor Banner - EduSpark Powered By...]
+    </div>
+
+    <div class="game-container">
+        <div class="game-header">
+            <h1>1st Grade Math Flashcards</h1>
+            <div class="game-info">
+                <span>Grade 1</span>
+                <span>Math</span>
+                <span>Flashcards</span>
+            </div>
+        </div>
+
+        <div class="game-content">
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st Grade Math Flashcards - EduSpark</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            max-width: 600px;
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+        }
+        .header { margin-bottom: 30px; }
+        .header h1 {
+            color: #f5576c;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .counter {
+            color: #666;
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .flashcard {
+            perspective: 1000px;
+            height: 350px;
+            margin: 30px 0;
+            cursor: pointer;
+        }
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        .flashcard-front {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+            padding: 40px;
+        }
+        .flashcard-back {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 40px;
+            transform: rotateY(180deg);
+        }
+        .instructions {
+            color: #666;
+            font-size: 0.95em;
+            margin: 20px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 10px;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 25px;
+            font-size: 1em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+        }
+        .btn-primary:hover { transform: scale(1.05); }
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #333;
+        }
+        .btn-secondary:hover { background: #d0d0d0; }
+        .progress {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, #f093fb, #f5576c);
+            height: 100%;
+            transition: width 0.3s;
+        }
+        .powered-by {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            font-size: 0.9em;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎴 1st Grade Math Flashcards</h1>
+            <p>Grade 1 • Math</p>
+        </div>
+
+        <div class="instructions">👆 Click the card to reveal the answer!</div>
+
+        <div class="counter">
+            Card <span id="currentCard">1</span> of <span id="totalCards">0</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+        </div>
+
+        <div class="flashcard" id="flashcard">
+            <div class="flashcard-inner">
+                <div class="flashcard-front" id="front"></div>
+                <div class="flashcard-back" id="back"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-secondary" onclick="previousCard()">← Previous</button>
+            <button class="btn btn-primary" onclick="nextCard()">Next →</button>
+        </div>
+
+        <div class="powered-by">
+            Powered by <strong>EduSpark</strong> — Free Educational Games for Kids
+        </div>
+    </div>
+
+    <script>
+        const cards = [{"q": "1 + 1 = ?", "a": "2", "opts": ["1", "2", "3"]}, {"q": "2 + 3 = ?", "a": "5", "opts": ["4", "5", "6"]}, {"q": "5 - 2 = ?", "a": "3", "opts": ["2", "3", "4"]}, {"q": "3 + 4 = ?", "a": "7", "opts": ["6", "7", "8"]}, {"q": "10 - 5 = ?", "a": "5", "opts": ["4", "5", "6"]}, {"q": "2 + 2 = ?", "a": "4", "opts": ["3", "4", "5"]}, {"q": "6 + 2 = ?", "a": "8", "opts": ["7", "8", "9"]}, {"q": "9 - 3 = ?", "a": "6", "opts": ["5", "6", "7"]}];
+        let currentCard = 0;
+
+        function displayCard() {
+            const card = cards[currentCard];
+            document.getElementById('front').textContent = card.q;
+            document.getElementById('back').textContent = card.a;
+            document.getElementById('currentCard').textContent = currentCard + 1;
+            document.getElementById('totalCards').textContent = cards.length;
+
+            const progress = ((currentCard + 1) / cards.length) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+
+            document.getElementById('flashcard').classList.remove('flipped');
+        }
+
+        document.getElementById('flashcard').onclick = function() {
+            this.classList.toggle('flipped');
+        };
+
+        function nextCard() {
+            if (currentCard < cards.length - 1) {
+                currentCard++;
+                displayCard();
+            }
+        }
+
+        function previousCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                displayCard();
+            }
+        }
+
+        displayCard();
+    </script>
+</body>
+</html>
+        </div>
+
+        <div class="footer">
+            <p><strong>EduSpark</strong> - Free Educational Games for Kids</p>
+            <p>© 2025 EduSpark. All rights reserved. | <a href="#">Safety & Privacy</a></p>
+        </div>
+    </div>
+</body>
+</html>

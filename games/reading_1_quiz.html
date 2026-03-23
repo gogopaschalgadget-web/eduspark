@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive quiz to test reading skills for grade 1">
+    <meta name="keywords" content="reading, 1, educational game, learning, kids, interactive">
+    <title>1st Grade Reading - EduSpark</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalApplication",
+        "name": "1st Grade Reading",
+        "description": "Interactive quiz to test reading skills for grade 1",
+        "educationalLevel": "Grade 1",
+        "audience": {"@type": "EducationalAudience", "educationalRole": "student"},
+        "learningResourceType": "Interactive Game"
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
+            background: #f5f5f5;
+        }
+        .nav {
+            background: #333;
+            padding: 15px;
+            text-align: center;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        .nav a:hover { color: #667eea; }
+        .ad-banner {
+            background: white;
+            padding: 15px;
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+            border-bottom: 1px solid #ddd;
+        }
+        .game-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .game-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .game-header h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        .game-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+        .game-content {
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin: 20px;
+            background: white;
+        }
+        .footer {
+            background: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="/">← Back to 1st Grade Reading</a>
+    </div>
+
+    <div class="ad-banner">
+        [Sponsor Banner - EduSpark Powered By...]
+    </div>
+
+    <div class="game-container">
+        <div class="game-header">
+            <h1>1st Grade Reading</h1>
+            <div class="game-info">
+                <span>Grade 1</span>
+                <span>Reading</span>
+                <span>Quiz</span>
+            </div>
+        </div>
+
+        <div class="game-content">
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st Grade Reading - EduSpark</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            max-width: 700px;
+            width: 100%;
+            padding: 30px;
+        }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .progress {
+            background: #e0e0e0;
+            height: 10px;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            height: 100%;
+            transition: width 0.3s;
+        }
+        .question {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #667eea;
+        }
+        .question-text {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .options { display: flex; flex-direction: column; gap: 10px; }
+        .option {
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            background: white;
+        }
+        .option:hover {
+            border-color: #667eea;
+            background: #f0f4ff;
+            transform: translateX(5px);
+        }
+        .option.selected {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        .option.correct {
+            background: #4caf50;
+            color: white;
+            border-color: #4caf50;
+        }
+        .option.incorrect {
+            background: #f44336;
+            color: white;
+            border-color: #f44336;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            margin: 10px 5px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        .btn-primary:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); }
+        .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+        .results {
+            text-align: center;
+            display: none;
+        }
+        .score {
+            font-size: 3em;
+            color: #4caf50;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+        .score.warning { color: #ff9800; }
+        .score.danger { color: #f44336; }
+        .results-text { font-size: 1.3em; color: #666; margin: 20px 0; }
+        .emoji { font-size: 1.5em; }
+        .stars { font-size: 2em; margin: 20px 0; }
+        .powered-by {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            font-size: 0.9em;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 1st Grade Reading</h1>
+            <p>Grade 1 • Reading</p>
+        </div>
+
+        <div id="quiz">
+            <div class="progress">
+                <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+            </div>
+            <div id="questionContainer">
+                <div class="question">
+                    <div class="question-text" id="questionText"></div>
+                    <div class="options" id="optionsContainer"></div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>Next Question →</button>
+            </div>
+        </div>
+
+        <div class="results" id="results">
+            <h2>Great Job! 🎉</h2>
+            <div class="score" id="scoreDisplay"></div>
+            <div class="stars" id="starsDisplay"></div>
+            <div class="results-text" id="resultsText"></div>
+            <button class="btn btn-primary" onclick="location.reload()">Try Again 🔄</button>
+        </div>
+
+        <div class="powered-by">
+            Powered by <strong>EduSpark</strong> — Free Educational Games for Kids
+        </div>
+    </div>
+
+    <script>
+        const questions = [{"q": "What do we read from?", "a": "Books", "opts": ["Books", "Cups", "Doors"]}, {"q": "What color is the sky?", "a": "Blue", "opts": ["Green", "Blue", "Red"]}, {"q": "What animal says 'moo'?", "a": "Cow", "opts": ["Dog", "Cow", "Cat"]}, {"q": "How many legs does a dog have?", "a": "4", "opts": ["2", "3", "4"]}, {"q": "What is the opposite of hot?", "a": "Cold", "opts": ["Warm", "Cold", "Hot"]}, {"q": "What comes after Monday?", "a": "Tuesday", "opts": ["Sunday", "Tuesday", "Wednesday"]}, {"q": "How many wheels does a bike have?", "a": "2", "opts": ["1", "2", "3"]}, {"q": "What animal says 'quack'?", "a": "Duck", "opts": ["Goose", "Duck", "Chicken"]}];
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+        let selectedAnswer = null;
+
+        function shuffleArray(arr) {
+            const newArr = [...arr];
+            for (let i = newArr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+            }
+            return newArr;
+        }
+
+        function displayQuestion() {
+            const q = questions[currentQuestion];
+            document.getElementById('questionText').textContent = q.q;
+
+            const options = shuffleArray(q.opts);
+            const container = document.getElementById('optionsContainer');
+            container.innerHTML = '';
+
+            options.forEach(opt => {
+                const div = document.createElement('div');
+                div.className = 'option';
+                div.textContent = opt;
+                div.onclick = () => selectAnswer(opt, div);
+                container.appendChild(div);
+            });
+
+            document.getElementById('nextBtn').disabled = true;
+            answered = false;
+            selectedAnswer = null;
+
+            const progress = ((currentQuestion) / questions.length) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        function selectAnswer(answer, element) {
+            if (answered) return;
+            answered = true;
+            selectedAnswer = answer;
+
+            const q = questions[currentQuestion];
+            const correct = q.a === answer;
+
+            document.querySelectorAll('.option').forEach(opt => {
+                if (opt.textContent === q.a) opt.classList.add('correct');
+                if (opt === element && !correct) opt.classList.add('incorrect');
+                opt.style.pointerEvents = 'none';
+            });
+
+            if (correct) score++;
+            document.getElementById('nextBtn').disabled = false;
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                displayQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('results').style.display = 'block';
+
+            const percentage = Math.round((score / questions.length) * 100);
+            let stars = '⭐';
+            if (percentage >= 80) stars = '⭐⭐⭐';
+            else if (percentage >= 60) stars = '⭐⭐';
+
+            let scoreClass = 'danger';
+            if (percentage >= 80) scoreClass = '';
+            else if (percentage >= 60) scoreClass = 'warning';
+
+            document.getElementById('scoreDisplay').textContent = score + '/' + questions.length;
+            document.getElementById('scoreDisplay').className = 'score ' + scoreClass;
+            document.getElementById('starsDisplay').textContent = stars;
+
+            const messages = [
+                'Awesome job!',
+                'You\'re doing great!',
+                'Keep practicing!',
+                'Nice work!'
+            ];
+            const msg = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('resultsText').textContent = percentage + '% correct — ' + msg;
+        }
+
+        displayQuestion();
+    </script>
+</body>
+</html>
+        </div>
+
+        <div class="footer">
+            <p><strong>EduSpark</strong> - Free Educational Games for Kids</p>
+            <p>© 2025 EduSpark. All rights reserved. | <a href="#">Safety & Privacy</a></p>
+        </div>
+    </div>
+</body>
+</html>
