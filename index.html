@@ -3,48 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduSpark - Free Educational Games for Kids K-8 | Learn While Playing</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="EduSpark offers free, curriculum-aligned educational games for kids K-8. Learn math, reading, science, and more through fun, teacher-created games. No ads. No subscriptions.">
-    <meta name="keywords" content="educational games for kids, free learning games, K-8 games, math games, reading games, science games, learning apps">
+    <meta name="description" content="EduSpark: Free, curriculum-aligned educational games for K-8 students. 50+ games across Math, Reading, Science, Spelling, Art, and Music. Created by teachers, loved by kids.">
+    <meta name="keywords" content="educational games, K-8 curriculum, free learning games, math games, reading games, science games, spelling games">
     <meta name="author" content="EduSpark">
-    <meta name="robots" content="index, follow">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="EduSpark - Free Educational Games for Kids K-8">
-    <meta property="og:description" content="Discover 100+ free, curriculum-aligned educational games designed to make learning fun for kids K-8. No ads. Teacher-created. Play now!">
-    <meta property="og:image" content="https://gogopaschalgadget-web.github.io/eduspark/og-image.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="EduSpark - Learning Made Fun for Every Kid">
+    <meta property="og:description" content="Free, curriculum-aligned educational games for K-8 students. 50+ games created by teachers.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80">
     <meta property="og:url" content="https://gogopaschalgadget-web.github.io/eduspark/">
     <meta property="og:type" content="website">
 
-    <!-- Structured Data - EducationalApplication -->
+    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "EducationalApplication",
         "name": "EduSpark",
-        "description": "Free educational games for kids K-8 covering math, reading, science, spelling, social studies, and art.",
+        "description": "Free curriculum-aligned educational games for K-8 students",
         "url": "https://gogopaschalgadget-web.github.io/eduspark/",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "Web",
+        "applicationCategory": "EducationApplication",
         "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
         },
+        "educationalLevel": "K-8",
         "author": {
             "@type": "Organization",
-            "name": "EduSpark"
+            "name": "EduSpark",
+            "url": "https://gogopaschalgadget-web.github.io/eduspark/"
         }
     }
     </script>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
@@ -55,8 +46,18 @@
         gtag('config', 'G-6ZLDKMTPKP');
     </script>
 
-    <!-- AdSense -->
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>EduSpark - Learning Made Fun for Every Kid</title>
 
     <style>
         * {
@@ -65,43 +66,23 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #6C63FF;
-            --primary-dark: #5a4fb8;
-            --pink: #EC4899;
-            --teal: #14B8A6;
-            --orange: #F59E0B;
-            --green: #22C55E;
-            --dark: #1F2937;
-            --light: #F9FAFB;
-            --border: #E5E7EB;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: 'Nunito', sans-serif;
-            color: var(--dark);
             line-height: 1.6;
-            background: white;
+            color: #333;
+            background-color: #f8f9fa;
         }
 
-        /* Navbar */
-        .navbar {
-            position: fixed;
+        /* Navigation */
+        nav {
+            position: sticky;
             top: 0;
-            width: 100%;
-            background: white;
-            box-shadow: var(--shadow-sm);
             z-index: 1000;
-            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #6C63FF 0%, #5A52D5 100%);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .navbar-content {
+        .nav-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 1rem 2rem;
@@ -111,20 +92,17 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--pink) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
             text-decoration: none;
         }
 
-        .logo i {
-            font-size: 2rem;
+        .logo-icon {
+            font-size: 2.2rem;
         }
 
         .nav-links {
@@ -134,12 +112,15 @@
         }
 
         .nav-links a {
+            color: white;
             text-decoration: none;
-            color: var(--dark);
             font-weight: 600;
-            font-size: 1rem;
             transition: all 0.3s ease;
             position: relative;
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-2px);
         }
 
         .nav-links a::after {
@@ -148,8 +129,8 @@
             bottom: -5px;
             left: 0;
             width: 0;
-            height: 3px;
-            background: var(--primary);
+            height: 2px;
+            background: #FFD700;
             transition: width 0.3s ease;
         }
 
@@ -160,69 +141,104 @@
         .hamburger {
             display: none;
             flex-direction: column;
-            gap: 6px;
             cursor: pointer;
         }
 
         .hamburger span {
             width: 25px;
             height: 3px;
-            background: var(--dark);
+            background: white;
+            margin: 5px 0;
+            transition: 0.3s;
             border-radius: 2px;
-            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
+                background: linear-gradient(135deg, #6C63FF 0%, #5A52D5 100%);
+                padding: 1rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 0.8rem 2rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .hamburger {
+                display: flex;
+            }
         }
 
         /* Hero Section */
         .hero {
-            margin-top: 70px;
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(236, 72, 153, 0.1) 50%, rgba(20, 184, 166, 0.1) 100%);
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(108, 99, 255, 0.7), rgba(90, 82, 213, 0.7)),
+                        url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            color: white;
+            overflow: hidden;
         }
 
         .hero-content {
-            max-width: 1000px;
-            margin: 0 auto;
+            max-width: 700px;
+            z-index: 2;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-
-        .hero h1 .highlight {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--pink) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
         }
 
         .hero p {
             font-size: 1.3rem;
-            color: #6B7280;
-            margin-bottom: 2.5rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
         }
 
-        .hero-buttons {
+        .hero-cta {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 1rem;
         }
 
         .btn {
-            padding: 1rem 2.5rem;
+            padding: 1rem 2rem;
             font-size: 1.1rem;
             font-weight: 700;
-            border-radius: 50px;
             border: none;
+            border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -231,37 +247,49 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            box-shadow: var(--shadow-sm);
+            background: #FFD700;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
         }
 
         .btn-secondary {
             background: white;
-            color: var(--primary);
-            border: 2px solid var(--primary);
+            color: #6C63FF;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
         }
 
         .btn-secondary:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
         }
 
         /* Trust Bar */
         .trust-bar {
-            background: var(--light);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: 3rem 2rem;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+            border-bottom: 3px solid #6C63FF;
         }
 
-        .trust-bar-content {
+        .trust-container {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
@@ -274,125 +302,154 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.8rem;
+            gap: 0.5rem;
         }
 
-        .trust-item i {
+        .trust-icon {
             font-size: 2.5rem;
-            color: var(--primary);
+            color: #6C63FF;
         }
 
         .trust-item p {
             font-weight: 600;
-            color: var(--dark);
+            color: #333;
         }
 
-        /* Subjects Section */
-        .subjects {
-            padding: 5rem 2rem;
-            background: white;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-
-        .section-title p {
-            font-size: 1.1rem;
-            color: #6B7280;
-            max-width: 600px;
+        /* Container */
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 2rem;
         }
 
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+        }
+
+        section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Subject Cards */
         .subjects-grid {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
         .subject-card {
             background: white;
-            border: 2px solid var(--border);
             border-radius: 15px;
-            padding: 2.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
             overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
         }
-
-        .subject-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--pink));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .subject-card.math::before { background: linear-gradient(90deg, var(--primary), #6366F1); }
-        .subject-card.reading::before { background: linear-gradient(90deg, var(--pink), #EC4899); }
-        .subject-card.science::before { background: linear-gradient(90deg, var(--orange), #F59E0B); }
-        .subject-card.spelling::before { background: linear-gradient(90deg, var(--green), #22C55E); }
-        .subject-card.social::before { background: linear-gradient(90deg, var(--teal), #14B8A6); }
-        .subject-card.art::before { background: linear-gradient(90deg, #A855F7, #D946EF); }
 
         .subject-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-8px);
-            box-shadow: var(--shadow);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
-        .subject-card:hover::before {
-            opacity: 1;
+        .subject-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
-        .subject-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+        .subject-content {
+            padding: 1.5rem;
         }
 
-        .subject-card h3 {
+        .subject-name {
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 0.8rem;
-            color: var(--dark);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .subject-card p {
-            color: #6B7280;
+        .subject-content p {
+            color: #666;
             margin-bottom: 1.5rem;
             font-size: 0.95rem;
         }
 
-        .game-count {
-            display: inline-block;
-            background: var(--light);
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 0.9rem;
+        .subject-card.math .subject-name { color: #FF6B6B; }
+        .subject-card.reading .subject-name { color: #4ECDC4; }
+        .subject-card.science .subject-name { color: #45B7D1; }
+        .subject-card.spelling .subject-name { color: #F7B731; }
+        .subject-card.art .subject-name { color: #EE5A6F; }
+        .subject-card.music .subject-name { color: #A29BFE; }
+
+        .btn-small {
+            padding: 0.7rem 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Nunito', sans-serif;
         }
 
-        /* Featured Games Section */
+        .subject-card.math .btn-small {
+            background: #FF6B6B;
+            color: white;
+        }
+        .subject-card.math .btn-small:hover {
+            background: #ff5252;
+        }
+
+        .subject-card.reading .btn-small {
+            background: #4ECDC4;
+            color: white;
+        }
+        .subject-card.reading .btn-small:hover {
+            background: #3ebfb8;
+        }
+
+        .subject-card.science .btn-small {
+            background: #45B7D1;
+            color: white;
+        }
+        .subject-card.science .btn-small:hover {
+            background: #36a5bd;
+        }
+
+        .subject-card.spelling .btn-small {
+            background: #F7B731;
+            color: #333;
+        }
+        .subject-card.spelling .btn-small:hover {
+            background: #e0a000;
+        }
+
+        .subject-card.art .btn-small {
+            background: #EE5A6F;
+            color: white;
+        }
+        .subject-card.art .btn-small:hover {
+            background: #e03a52;
+        }
+
+        .subject-card.music .btn-small {
+            background: #A29BFE;
+            color: white;
+        }
+        .subject-card.music .btn-small:hover {
+            background: #8a7be8;
+        }
+
+        /* Featured Games */
         .featured-games {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, rgba(108, 99, 255, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
         .games-grid {
@@ -400,200 +457,145 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
         .game-card {
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
         }
 
         .game-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
-        .game-header {
+        .game-image {
+            width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, var(--primary), var(--pink));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-            position: relative;
-            overflow: hidden;
+            object-fit: cover;
         }
 
-        .game-header.math { background: linear-gradient(135deg, #6C63FF, #7C3AED); }
-        .game-header.reading { background: linear-gradient(135deg, #EC4899, #DB2777); }
-        .game-header.science { background: linear-gradient(135deg, #F59E0B, #D97706); }
-        .game-header.spelling { background: linear-gradient(135deg, #22C55E, #16A34A); }
-        .game-header.social { background: linear-gradient(135deg, #14B8A6, #0D9488); }
-        .game-header.language { background: linear-gradient(135deg, #A855F7, #9333EA); }
-
-        .game-body {
-            padding: 2rem;
+        .game-content {
+            padding: 1.5rem;
         }
 
-        .game-tags {
-            display: flex;
-            gap: 0.7rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
+        .game-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
         }
 
-        .tag {
+        .grade-badge {
             display: inline-block;
-            padding: 0.4rem 0.9rem;
-            background: var(--light);
+            background: #6C63FF;
+            color: white;
+            padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 600;
-            color: var(--primary);
+            margin-bottom: 1rem;
         }
 
-        .game-card h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-            color: var(--dark);
-        }
-
-        .game-card p {
-            color: #6B7280;
+        .game-content p {
+            color: #666;
             margin-bottom: 1.5rem;
             font-size: 0.95rem;
         }
 
-        .game-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .grade-level {
-            font-size: 0.85rem;
-            color: #9CA3AF;
-            font-weight: 600;
-        }
-
-        .play-btn {
-            background: var(--primary);
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, #6C63FF 0%, #5A52D5 100%);
             color: white;
-            border: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 700;
-            font-family: 'Nunito', sans-serif;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
         }
 
-        .play-btn:hover {
-            background: var(--primary-dark);
-            transform: scale(1.05);
+        .stats h2 {
+            color: white;
         }
 
-        /* Blog Section */
-        .blog {
-            padding: 5rem 2rem;
-            background: white;
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
         }
 
+        .stat-item h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+        }
+
+        /* Blog Preview */
         .blog-grid {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
         .blog-card {
             background: white;
-            border: 1px solid var(--border);
             border-radius: 15px;
             overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
+            text-decoration: none;
+            color: #333;
         }
 
         .blog-card:hover {
-            border-color: var(--primary);
-            box-shadow: var(--shadow);
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
         .blog-image {
+            width: 100%;
             height: 180px;
-            background: linear-gradient(135deg, var(--primary), var(--pink));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-        }
-
-        .blog-card h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-            color: var(--dark);
-        }
-
-        .blog-card p {
-            color: #6B7280;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
+            object-fit: cover;
         }
 
         .blog-content {
             padding: 1.5rem;
         }
 
-        .blog-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border);
-            margin-top: 1rem;
+        .blog-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #333;
         }
 
-        .blog-date {
-            font-size: 0.85rem;
-            color: #9CA3AF;
+        .blog-excerpt {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
         }
 
         .read-more {
-            color: var(--primary);
-            font-weight: 700;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            transition: all 0.3s ease;
+            color: #6C63FF;
+            font-weight: 600;
+            font-size: 0.95rem;
         }
 
-        .read-more:hover {
-            gap: 0.8rem;
+        .blog-card:hover .read-more {
+            color: #5A52D5;
+            text-decoration: underline;
         }
 
-        /* Testimonials Section */
+        /* Testimonials */
         .testimonials {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, rgba(108, 99, 255, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
         .testimonials-grid {
@@ -604,289 +606,147 @@
             gap: 2rem;
         }
 
-        .testimonial {
+        .testimonial-card {
             background: white;
-            padding: 2rem;
             border-radius: 15px;
-            box-shadow: var(--shadow-sm);
-            border-left: 4px solid var(--primary);
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: relative;
         }
 
-        .testimonial.pink {
-            border-left-color: var(--pink);
+        .testimonial-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid #6C63FF;
         }
 
-        .testimonial.teal {
-            border-left-color: var(--teal);
+        .quote {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+            font-style: italic;
         }
 
         .stars {
-            color: var(--orange);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
+            color: #FFD700;
+            margin-bottom: 0.5rem;
         }
 
-        .testimonial p {
-            font-style: italic;
-            color: #6B7280;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .author {
+        .author-name {
             font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 0.3rem;
+            color: #333;
         }
 
-        .role {
+        .author-title {
+            color: #999;
             font-size: 0.9rem;
-            color: #9CA3AF;
         }
 
         /* CTA Banner */
         .cta-banner {
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--pink) 100%);
+            background: linear-gradient(135deg, #FFD700 0%, #FFC700 100%);
+            padding: 3rem 2rem;
             text-align: center;
-            color: white;
+            margin: 3rem 0;
+            border-radius: 20px;
+            margin-left: 2rem;
+            margin-right: 2rem;
         }
 
         .cta-banner h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
+            color: #333;
             margin-bottom: 1.5rem;
         }
 
-        .cta-banner p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
+        .cta-banner .btn-primary {
+            background: #6C63FF;
+            color: white;
         }
 
-        .cta-banner .btn {
-            background: white;
-            color: var(--primary);
-            border: none;
-        }
-
-        .cta-banner .btn:hover {
-            background: var(--light);
-            transform: translateY(-2px);
+        .cta-banner .btn-primary:hover {
+            background: #5A52D5;
         }
 
         /* Footer */
         footer {
-            background: var(--dark);
+            background: #1a1a2e;
             color: white;
-            padding: 4rem 2rem 2rem;
+            padding: 3rem 2rem 1rem;
         }
 
-        .footer-content {
+        .footer-container {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
         .footer-column h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
+            color: #FFD700;
         }
 
         .footer-column a {
-            color: #D1D5DB;
+            display: block;
+            color: #ccc;
             text-decoration: none;
+            margin-bottom: 0.5rem;
             transition: color 0.3s ease;
         }
 
         .footer-column a:hover {
-            color: var(--primary);
+            color: #FFD700;
         }
 
         .footer-bottom {
-            border-top: 1px solid #374151;
+            text-align: center;
             padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Ad Slots */
+        .ad-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
             text-align: center;
-            color: #9CA3AF;
-        }
-
-        /* AdSense Placeholder */
-        .ad-slot {
-            margin: 2rem 0;
-            text-align: center;
-            min-height: 100px;
-            background: var(--light);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #9CA3AF;
-            font-size: 0.9rem;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 1.5rem;
-                gap: 1rem;
-                box-shadow: var(--shadow-sm);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .hamburger.active span:nth-child(1) {
-                transform: rotate(45deg) translate(8px, 8px);
-            }
-
-            .hamburger.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(8px, -8px);
-            }
-
-            .hero {
-                padding: 3rem 1rem;
-                margin-top: 60px;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-
-            .cta-banner h2 {
-                font-size: 1.8rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .navbar-content {
-                padding: 1rem;
-            }
-
-            .logo {
-                font-size: 1.4rem;
-            }
-
-            .hero {
-                padding: 2rem 1rem;
-            }
-
-            .hero h1 {
-                font-size: 1.6rem;
-                margin-bottom: 1rem;
-            }
-
-            .hero p {
-                font-size: 0.95rem;
-            }
-
-            .trust-bar-content {
-                gap: 1.5rem;
-            }
+            min-height: 250px;
         }
 
         /* Animations */
-        @keyframes fadeInUp {
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(30px);
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
             }
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
+        section {
+            animation: fadeIn 0.6s ease-out;
         }
-
-        .subject-card,
-        .game-card,
-        .blog-card,
-        .testimonial {
-            animation: fadeInUp 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-        .subject-card:nth-child(1) { animation-delay: 0.1s; }
-        .subject-card:nth-child(2) { animation-delay: 0.2s; }
-        .subject-card:nth-child(3) { animation-delay: 0.3s; }
-        .subject-card:nth-child(4) { animation-delay: 0.4s; }
-        .subject-card:nth-child(5) { animation-delay: 0.5s; }
-        .subject-card:nth-child(6) { animation-delay: 0.6s; }
-
-        .game-card:nth-child(1) { animation-delay: 0.1s; }
-        .game-card:nth-child(2) { animation-delay: 0.2s; }
-        .game-card:nth-child(3) { animation-delay: 0.3s; }
-
-        .blog-card:nth-child(1) { animation-delay: 0.1s; }
-        .blog-card:nth-child(2) { animation-delay: 0.2s; }
-        .blog-card:nth-child(3) { animation-delay: 0.3s; }
-
-        .testimonial:nth-child(1) { animation-delay: 0.1s; }
-        .testimonial:nth-child(2) { animation-delay: 0.2s; }
-        .testimonial:nth-child(3) { animation-delay: 0.3s; }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-content">
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
             <a href="#" class="logo">
-                <i class="fas fa-sparkles"></i>
-                EduSpark
+                <span class="logo-icon">🎓</span>
+                <span>EduSpark</span>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#games">Games</a></li>
-                <li><a href="#subjects">Subjects</a></li>
+                <li><a href="grade-k.html">Games</a></li>
+                <li><a href="math.html">Subjects</a></li>
                 <li><a href="blog/">Blog</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="parents.html">Parents</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -899,99 +759,156 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Learn Through <span class="highlight">Play</span></h1>
-            <p>Free, curriculum-aligned educational games that make learning fun for kids K-8. Created by teachers. No ads. No subscriptions.</p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="document.getElementById('games').scrollIntoView({behavior: 'smooth'})">
+            <h1>Learning Made Fun for Every Kid</h1>
+            <p>Explore 50+ curriculum-aligned games across Math, Reading, Science, and more. Created by teachers, loved by students. Completely free with no ads in games.</p>
+            <div class="hero-cta">
+                <a href="grade-k.html" class="btn btn-primary">
                     <i class="fas fa-gamepad"></i> Browse Games
-                </button>
-                <button class="btn btn-secondary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
-                    <i class="fas fa-users"></i> For Parents
-                </button>
+                </a>
+                <a href="parents.html" class="btn btn-secondary">
+                    <i class="fas fa-book"></i> For Parents
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Trust Bar -->
-    <section class="trust-bar">
-        <div class="trust-bar-content">
+    <div class="trust-bar">
+        <div class="trust-container">
             <div class="trust-item">
-                <i class="fas fa-book"></i>
+                <div class="trust-icon"><i class="fas fa-book-open"></i></div>
                 <p>Curriculum-Aligned</p>
             </div>
             <div class="trust-item">
-                <i class="fas fa-child"></i>
-                <p>Age-Appropriate</p>
-            </div>
-            <div class="trust-item">
-                <i class="fas fa-ban"></i>
+                <div class="trust-icon"><i class="fas fa-ban"></i></div>
                 <p>No Ads in Games</p>
             </div>
             <div class="trust-item">
-                <i class="fas fa-chalkboard-user"></i>
-                <p>Teacher-Created</p>
+                <div class="trust-icon"><i class="fas fa-chalkboard-user"></i></div>
+                <p>Created by Teachers</p>
             </div>
             <div class="trust-item">
-                <i class="fas fa-star"></i>
-                <p>Free Forever</p>
+                <div class="trust-icon"><i class="fas fa-star"></i></div>
+                <p>100% Free Forever</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon"><i class="fas fa-shield"></i></div>
+                <p>COPPA Safe</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subjects Section -->
+    <section>
+        <div class="container">
+            <h2><i class="fas fa-palette"></i> Choose Your Subject</h2>
+            <div class="subjects-grid">
+                <!-- Math -->
+                <div class="subject-card math">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=80" alt="Math" class="subject-image" loading="lazy">
+                    <div class="subject-content">
+                        <div class="subject-name"><i class="fas fa-calculator"></i> Math</div>
+                        <p>Master addition, subtraction, multiplication, and more through engaging games.</p>
+                        <a href="math.html" class="btn-small">Play Now</a>
+                    </div>
+                </div>
+
+                <!-- Reading -->
+                <div class="subject-card reading">
+                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80" alt="Reading" class="subject-image" loading="lazy">
+                    <div class="subject-content">
+                        <div class="subject-name"><i class="fas fa-book"></i> Reading</div>
+                        <p>Build reading skills with interactive stories, comprehension games, and word challenges.</p>
+                        <a href="reading.html" class="btn-small">Play Now</a>
+                    </div>
+                </div>
+
+                <!-- Science -->
+                <div class="subject-card science">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=80" alt="Science" class="subject-image" loading="lazy">
+                    <div class="subject-content">
+                        <div class="subject-name"><i class="fas fa-flask"></i> Science</div>
+                        <p>Explore biology, physics, and earth science through fun and interactive experiments.</p>
+                        <a href="science.html" class="btn-small">Play Now</a>
+                    </div>
+                </div>
+
+                <!-- Spelling -->
+                <div class="subject-card spelling">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="Spelling" class="subject-image" loading="lazy">
+                    <div class="subject-content">
+                        <div class="subject-name"><i class="fas fa-spell-check"></i> Spelling</div>
+                        <p>Perfect spelling with word games, dictation exercises, and spelling bees.</p>
+                        <a href="spelling.html" class="btn-small">Play Now</a>
+                    </div>
+                </div>
+
+                <!-- Art -->
+                <div class="subject-card art">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" alt="Art" class="subject-image" loading="lazy">
+                    <div class="subject-content">
+                        <div class="subject-name"><i class="fas fa-paintbrush"></i> Art</div>
+                        <p>Unleash creativity with drawing games, color challenges, and artistic activities.</p>
+                        <a href="math.html" class="btn-small">Play Now</a>
+                    </div>
+                </div>
+
+                <!-- Music -->
+                <div class="subject-card music">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&q=80" alt="Music" class="subject-image" loading="lazy">
+                    <div class="subject-content">
+                        <div class="subject-name"><i class="fas fa-music"></i> Music</div>
+                        <p>Learn rhythm, melody, and music theory through fun rhythm and music games.</p>
+                        <a href="math.html" class="btn-small">Play Now</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Subjects Section -->
-    <section class="subjects" id="subjects">
-        <div class="section-title">
-            <h2>Learn Every Subject</h2>
-            <p>Explore 100+ games across all core subjects and learning areas</p>
-        </div>
+    <!-- Featured Games -->
+    <section class="featured-games">
+        <div class="container">
+            <h2><i class="fas fa-star"></i> Featured Games</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=400&q=80" alt="Quiz Master" class="game-image" loading="lazy">
+                    <div class="game-content">
+                        <h3 class="game-title">Quiz Master</h3>
+                        <span class="grade-badge">Grades K-8</span>
+                        <p>Test your knowledge across all subjects with interactive quizzes and instant feedback.</p>
+                        <a href="grade-k.html" class="btn-small" style="background: #6C63FF; color: white;">Play Free</a>
+                    </div>
+                </div>
 
-        <div class="subjects-grid">
-            <div class="subject-card math">
-                <div class="subject-icon"><i class="fas fa-calculator"></i></div>
-                <h3>Math</h3>
-                <p>From basic counting to algebra, make math fun with interactive games</p>
-                <span class="game-count">18 Games</span>
-            </div>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=400&q=80" alt="Math Adventure" class="game-image" loading="lazy">
+                    <div class="game-content">
+                        <h3 class="game-title">Math Adventure</h3>
+                        <span class="grade-badge">Grades 1-5</span>
+                        <p>Solve math problems to advance through exciting adventures and unlock achievements.</p>
+                        <a href="grade-k.html" class="btn-small" style="background: #6C63FF; color: white;">Play Free</a>
+                    </div>
+                </div>
 
-            <div class="subject-card reading">
-                <div class="subject-icon"><i class="fas fa-book-open"></i></div>
-                <h3>Reading</h3>
-                <p>Build fluency and comprehension with engaging reading adventures</p>
-                <span class="game-count">15 Games</span>
-            </div>
-
-            <div class="subject-card science">
-                <div class="subject-icon"><i class="fas fa-flask"></i></div>
-                <h3>Science</h3>
-                <p>Discover the wonders of nature and scientific thinking</p>
-                <span class="game-count">14 Games</span>
-            </div>
-
-            <div class="subject-card spelling">
-                <div class="subject-icon"><i class="fas fa-spell-check"></i></div>
-                <h3>Spelling</h3>
-                <p>Master spelling through fun, interactive word games</p>
-                <span class="game-count">12 Games</span>
-            </div>
-
-            <div class="subject-card social">
-                <div class="subject-icon"><i class="fas fa-globe"></i></div>
-                <h3>Social Studies</h3>
-                <p>Explore history, geography, and cultures around the world</p>
-                <span class="game-count">16 Games</span>
-            </div>
-
-            <div class="subject-card art">
-                <div class="subject-icon"><i class="fas fa-palette"></i></div>
-                <h3>Art & Music</h3>
-                <p>Unleash creativity with art and music learning experiences</p>
-                <span class="game-count">10 Games</span>
+                <div class="game-card">
+                    <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=400&q=80" alt="Word Challenge" class="game-image" loading="lazy">
+                    <div class="game-content">
+                        <h3 class="game-title">Word Challenge</h3>
+                        <span class="grade-badge">Grades 2-8</span>
+                        <p>Build vocabulary and spelling skills while competing with friends in word games.</p>
+                        <a href="grade-k.html" class="btn-small" style="background: #6C63FF; color: white;">Play Free</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- AdSense Slot 1 -->
-    <div class="ad-slot">
+    <div class="ad-container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508"
+             crossorigin="anonymous"></script>
+        <!-- EduSpark Display Ad 1 -->
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-5182415121977508"
@@ -1003,84 +920,69 @@
         </script>
     </div>
 
-    <!-- Featured Games Section -->
-    <section class="featured-games" id="games">
-        <div class="section-title">
-            <h2>Featured Games</h2>
-            <p>Jump into these popular games and start learning today</p>
-        </div>
-
-        <div class="games-grid">
-            <div class="game-card">
-                <div class="game-header math">
-                    <i class="fas fa-plus"></i>
-                </div>
-                <div class="game-body">
-                    <div class="game-tags">
-                        <span class="tag">Math</span>
-                        <span class="tag">Grades 1-3</span>
-                    </div>
-                    <h3>Math Adventure</h3>
-                    <p>Journey through magical lands while mastering addition, subtraction, and number sense through engaging challenges.</p>
-                    <div class="game-meta">
-                        <span class="grade-level">Ages 6-9</span>
-                        <a href="https://gogopaschalgadget-web.github.io/eduspark/math-adventure.html" class="play-btn">
-                            <i class="fas fa-play"></i> Play
-                        </a>
-                    </div>
-                </div>
+    <!-- Stats Section -->
+    <section class="stats">
+        <h2>Why Choose EduSpark?</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>10,000+</h3>
+                <p>Happy Students</p>
             </div>
-
-            <div class="game-card">
-                <div class="game-header reading">
-                    <i class="fas fa-book-open"></i>
-                </div>
-                <div class="game-body">
-                    <div class="game-tags">
-                        <span class="tag">Reading</span>
-                        <span class="tag">Grades 2-4</span>
-                    </div>
-                    <h3>Reading Rockets</h3>
-                    <p>Blast off into reading adventures! Build phonics skills, sight word recognition, and reading comprehension through exciting space missions.</p>
-                    <div class="game-meta">
-                        <span class="grade-level">Ages 7-10</span>
-                        <a href="https://gogopaschalgadget-web.github.io/eduspark/reading-rockets.html" class="play-btn">
-                            <i class="fas fa-play"></i> Play
-                        </a>
-                    </div>
-                </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Interactive Games</p>
             </div>
-
-            <div class="game-card">
-                <div class="game-header science">
-                    <i class="fas fa-flask"></i>
-                </div>
-                <div class="game-body">
-                    <div class="game-tags">
-                        <span class="tag">Science</span>
-                        <span class="tag">Grades 3-5</span>
-                    </div>
-                    <h3>Science Explorer</h3>
-                    <p>Investigate planets, organisms, and natural phenomena. Discover scientific concepts through hands-on virtual experiments and exploration.</p>
-                    <div class="game-meta">
-                        <span class="grade-level">Ages 8-11</span>
-                        <a href="https://gogopaschalgadget-web.github.io/eduspark/science-explorer.html" class="play-btn">
-                            <i class="fas fa-play"></i> Play
-                        </a>
-                    </div>
-                </div>
+            <div class="stat-item">
+                <h3>K-8</h3>
+                <p>All Grade Levels</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Completely Free</p>
             </div>
         </div>
+    </section>
 
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="#subjects" class="btn btn-primary">
-                <i class="fas fa-search"></i> Explore All Games
-            </a>
+    <!-- Blog Preview -->
+    <section>
+        <div class="container">
+            <h2><i class="fas fa-newspaper"></i> From Our Blog</h2>
+            <div class="blog-grid">
+                <a href="blog/best-free-math-games-3rd-graders.html" class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=400&q=80" alt="Blog Post" class="blog-image" loading="lazy">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Best Free Math Games for 3rd Graders</h3>
+                        <p class="blog-excerpt">Discover the top math games that help 3rd graders master multiplication, division, and fractions.</p>
+                        <span class="read-more">Read Article →</span>
+                    </div>
+                </a>
+
+                <a href="blog/how-to-make-science-fun-at-home.html" class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&q=80" alt="Blog Post" class="blog-image" loading="lazy">
+                    <div class="blog-content">
+                        <h3 class="blog-title">How to Make Science Fun at Home</h3>
+                        <p class="blog-excerpt">Learn practical tips and activities to spark your child's interest in science and discovery.</p>
+                        <span class="read-more">Read Article →</span>
+                    </div>
+                </a>
+
+                <a href="blog/screen-time-learning-balance.html" class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=400&q=80" alt="Blog Post" class="blog-image" loading="lazy">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Screen Time & Learning Balance</h3>
+                        <p class="blog-excerpt">Expert advice on managing screen time while ensuring your kids get the educational benefits they need.</p>
+                        <span class="read-more">Read Article →</span>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- AdSense Slot 2 -->
-    <div class="ad-slot">
+    <div class="ad-container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508"
+             crossorigin="anonymous"></script>
+        <!-- EduSpark Display Ad 2 -->
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-5182415121977508"
@@ -1092,76 +994,62 @@
         </script>
     </div>
 
-    <!-- Blog Preview Section -->
-    <section class="blog">
-        <div class="section-title">
-            <h2>From Our Blog</h2>
-            <p>Tips, strategies, and insights for parents and educators</p>
-        </div>
-
-        <div class="blog-grid">
-            <div class="blog-card">
-                <div class="blog-image">
-                    <i class="fas fa-calculator"></i>
-                </div>
-                <div class="blog-content">
-                    <h3>Best Free Math Games for 3rd Graders</h3>
-                    <p>Discover the top-rated math games that help 3rd graders master multiplication, division, and fractions while having fun.</p>
-                    <div class="blog-meta">
-                        <span class="blog-date">March 15, 2026</span>
-                        <a href="blog/best-free-math-games-3rd-graders.html" class="read-more">
-                            Read <i class="fas fa-arrow-right"></i>
-                        </a>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2><i class="fas fa-heart"></i> What Parents & Teachers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=600&q=80" alt="Parent" class="testimonial-image" loading="lazy">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
+                    <p class="quote">"My kids actually look forward to learning now! EduSpark games make math and reading fun without the screen time guilt."</p>
+                    <div class="author-name">Sarah Martinez</div>
+                    <div class="author-title">Parent of 3rd & 5th Graders</div>
                 </div>
-            </div>
 
-            <div class="blog-card">
-                <div class="blog-image">
-                    <i class="fas fa-flask"></i>
-                </div>
-                <div class="blog-content">
-                    <h3>How to Make Science Fun at Home</h3>
-                    <p>Learn creative ways to incorporate science learning into your home environment using games, experiments, and interactive tools.</p>
-                    <div class="blog-meta">
-                        <span class="blog-date">March 12, 2026</span>
-                        <a href="blog/how-to-make-science-fun-at-home.html" class="read-more">
-                            Read <i class="fas fa-arrow-right"></i>
-                        </a>
+                <div class="testimonial-card">
+                    <img src="https://images.unsplash.com/photo-1537003904737-13d8c8d42a7d?w=600&q=80" alt="Teacher" class="testimonial-image" loading="lazy">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                </div>
-            </div>
-
-            <div class="blog-card">
-                <div class="blog-image">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <div class="blog-content">
-                    <h3>Screen Time & Learning Balance</h3>
-                    <p>Finding the right balance between educational screen time and other activities. Expert tips for healthy digital learning habits.</p>
-                    <div class="blog-meta">
-                        <span class="blog-date">March 8, 2026</span>
-                        <a href="blog/screen-time-learning-balance.html" class="read-more">
-                            Read <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+                    <p class="quote">"As an educator, I'm impressed by how EduSpark aligns with curriculum standards. The games are engaging, educational, and completely free!"</p>
+                    <div class="author-name">Mr. James Chen</div>
+                    <div class="author-title">4th Grade Teacher</div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="blog/" class="btn btn-primary">
-                <i class="fas fa-newspaper"></i> Visit Blog
+    <!-- CTA Banner -->
+    <section>
+        <div class="cta-banner">
+            <h2><i class="fas fa-rocket"></i> Start Learning Today — It's Free!</h2>
+            <p style="color: #333; margin-bottom: 1.5rem; font-size: 1.1rem;">No sign-up required. No ads in games. No cost ever. Just pure learning fun.</p>
+            <a href="grade-k.html" class="btn btn-primary">
+                <i class="fas fa-gamepad"></i> Explore 50+ Games
             </a>
         </div>
     </section>
 
     <!-- AdSense Slot 3 -->
-    <div class="ad-slot">
+    <div class="ad-container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508"
+             crossorigin="anonymous"></script>
+        <!-- EduSpark Display Ad 3 -->
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-5182415121977508"
-             data-ad-slot="5678901234"
+             data-ad-slot="1122334455"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
         <script>
@@ -1169,128 +1057,82 @@
         </script>
     </div>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="about">
-        <div class="section-title">
-            <h2>What Parents Say</h2>
-            <p>Join thousands of families using EduSpark for at-home learning</p>
-        </div>
-
-        <div class="testimonials-grid">
-            <div class="testimonial">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p>"My son begs to play these games! They're genuinely educational, and I love that there are no ads. Finally found something that works!"</p>
-                <div class="author">Sarah Martinez</div>
-                <div class="role">Parent, Iowa</div>
-            </div>
-
-            <div class="testimonial pink">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p>"As a 3rd grade teacher, I recommend EduSpark to all my families. The games reinforce what we learn in class, and they're perfect for homework time."</p>
-                <div class="author">Jennifer Lopez</div>
-                <div class="role">Elementary Teacher, California</div>
-            </div>
-
-            <div class="testimonial teal">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p>"We switched from expensive subscription apps. EduSpark is free, comprehensive, and my kids have improved their reading and math skills noticeably."</p>
-                <div class="author">David Chen</div>
-                <div class="role">Parent, Texas</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Banner -->
-    <section class="cta-banner">
-        <h2>Start Learning Today</h2>
-        <p>It's completely free. No credit card required.</p>
-        <button class="btn" onclick="document.getElementById('games').scrollIntoView({behavior: 'smooth'})">
-            <i class="fas fa-gamepad"></i> Browse 100+ Games
-        </button>
-    </section>
-
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
+        <div class="footer-container">
             <div class="footer-column">
-                <h3>EduSpark</h3>
-                <ul>
-                    <li><a href="#subjects">Games by Subject</a></li>
-                    <li><a href="#games">Featured Games</a></li>
-                    <li><a href="blog/">Blog</a></li>
-                    <li><a href="#about">Testimonials</a></li>
-                </ul>
+                <h3><i class="fas fa-gamepad"></i> Games by Grade</h3>
+                <a href="grade-k.html">Kindergarten</a>
+                <a href="grade-1.html">1st Grade</a>
+                <a href="grade-2.html">2nd Grade</a>
+                <a href="grade-3.html">3rd Grade</a>
+                <a href="grade-4.html">4th Grade</a>
+                <a href="grade-5.html">5th Grade</a>
+                <a href="grade-6.html">6th Grade</a>
+                <a href="grade-7.html">7th Grade</a>
+                <a href="grade-8.html">8th Grade</a>
             </div>
 
             <div class="footer-column">
-                <h3>Learning</h3>
-                <ul>
-                    <li><a href="#subjects">Math Games</a></li>
-                    <li><a href="#subjects">Reading Games</a></li>
-                    <li><a href="#subjects">Science Games</a></li>
-                    <li><a href="#subjects">All Subjects</a></li>
-                </ul>
+                <h3><i class="fas fa-book"></i> Subjects</h3>
+                <a href="math.html">Math</a>
+                <a href="reading.html">Reading</a>
+                <a href="science.html">Science</a>
+                <a href="spelling.html">Spelling</a>
+                <a href="math.html">Art</a>
+                <a href="math.html">Music</a>
             </div>
 
             <div class="footer-column">
-                <h3>Resources</h3>
-                <ul>
-                    <li><a href="blog/">Learning Tips</a></li>
-                    <li><a href="blog/">Parent Guides</a></li>
-                    <li><a href="blog/">Grade Levels</a></li>
-                    <li><a href="blog/">Topics</a></li>
-                </ul>
+                <h3><i class="fas fa-users"></i> Parents</h3>
+                <a href="parents.html">Parent Resources</a>
+                <a href="blog/">Learning Blog</a>
+                <a href="parents.html">Tips & Guides</a>
+                <a href="parents.html">Screen Time Guide</a>
+                <a href="parents.html">Parent FAQ</a>
             </div>
 
             <div class="footer-column">
-                <h3>About</h3>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
+                <h3><i class="fas fa-info-circle"></i> About</h3>
+                <a href="#">About EduSpark</a>
+                <a href="#">How It Works</a>
+                <a href="#">Safety & Privacy</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Terms of Service</a>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 EduSpark. Free educational games for kids K-8. All rights reserved.</p>
+            <p>&copy; 2024 EduSpark. Learning made fun for every kid. | <a href="#" style="color: #FFD700;">Privacy Policy</a> | <a href="#" style="color: #FFD700;">Terms of Service</a></p>
         </div>
     </footer>
 
-    <!-- Mobile Menu Toggle -->
     <script>
+        // Mobile Navigation Toggle
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
 
         hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
         });
 
-        // Close menu when a link is clicked
+        // Close menu when link is clicked
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
