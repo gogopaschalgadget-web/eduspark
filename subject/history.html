@@ -1,79 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6ZLDKMTPKP');
-</script>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore free, curriculum-aligned history games for grade 3. Interactive quizzes about past events, historical figures, and American history.">
+    <meta name="keywords" content="history games, grade 3 history, American history, historical figures, past events, educational games">
+    <title>History Games | EduSpark</title>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6ZLDKMTPKP');
+    </script>
+
+    <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History Games - EduSpark</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Schema.org Breadcrumb -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://web-production-eb2a6.up.railway.app/eduspark/"},
+            {"@type": "ListItem", "position": 2, "name": "History Games", "item": "https://web-production-eb2a6.up.railway.app/eduspark/subject/history.html"}
+        ]
+    }
+    </script>
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            padding: 20px;
+        :root {
+            --primary: #6C63FF;
+            --primary-dark: #5a4fb8;
+            --pink: #EC4899;
+            --teal: #14B8A6;
+            --orange: #F59E0B;
+            --green: #22C55E;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --border: #E5E7EB;
         }
-        .container {
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: white;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            border-bottom: 1px solid var(--border);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: white;
+                padding: 1rem;
+                gap: 1rem;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        main {
+            margin-top: 70px;
+            min-height: calc(100vh - 70px);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            color: #6B7280;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #A855F7 0%, #9333EA 100%);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-content {
             max-width: 1200px;
             margin: 0 auto;
         }
-        header {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 40px;
-            text-align: center;
+
+        .hero-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
         }
-        header h1 {
-            color: #f5576c;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
         }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Section Container */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+
+        /* Game Cards Grid */
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
+
         .game-card {
-            background: white;
+            border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: white;
         }
-        .btn-play {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #f5576c;
+
+        .game-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.15);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #A855F7 0%, #9333EA 100%);
             color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .card-header h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .grade-tag {
+            display: inline-block;
+            background-color: #F3E8FF;
+            color: #6B21A8;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-description {
+            color: #6B7280;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .play-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #A855F7 0%, #9333EA 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
             border-radius: 8px;
             text-decoration: none;
-            margin-top: 10px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .play-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: #A855F7;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .benefit-card p {
+            color: #6B7280;
+            font-size: 0.95rem;
+        }
+
+        /* Other Subjects Section */
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .subject-link {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--dark);
+            border: 2px solid var(--border);
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .subject-link:hover {
+            border-color: #A855F7;
+            color: #A855F7;
+            background-color: #F3E8FF;
+        }
+
+        .subject-link i {
+            display: block;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-column p {
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-column a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        footer > div:last-child {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #9CA3AF;
+            font-size: 0.9rem;
+        }
+
+        footer > div:last-child a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer > div:last-child a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="/" style="color: white; text-decoration: none;">← Back</a>
-        <header>
-            <h1>History Learning Games</h1>
-        </header>
-        <div class="games-grid">
-            
-        <div class="game-card">
-            <h3>3rd Grade History</h3>
-            <p>Grade 3</p>
-            <a href="/games/history_3_quiz.html" class="btn-play">Play →</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="/eduspark/" class="logo"><i class="fas fa-bolt"></i> EduSpark</a>
+            <ul class="nav-links">
+                <li><a href="/eduspark/">Home</a></li>
+                <li><a href="/eduspark/parents.html">Parents</a></li>
+                <li><a href="/eduspark/blog/">Blog</a></li>
+            </ul>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
         </div>
+    </nav>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="/eduspark/">Home</a> / <span>History Games</span>
         </div>
-    </div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <div class="hero-icon">🏛️</div>
+                <h1>History Games</h1>
+                <p>Discover the past through interactive quizzes about historical events, influential figures, and the stories that shaped our world.</p>
+            </div>
+        </div>
+
+        <!-- Games Section -->
+        <section class="section">
+            <h2>All History Games</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-landmark"></i> 3rd Grade History</h3>
+                    </div>
+                    <div class="card-body">
+                        <span class="grade-tag">Grade 3</span>
+                        <p class="card-description">Learn about important historical figures, communities, holidays, and key events in American history.</p>
+                        <a href="/eduspark/games/history_3_quiz.html" class="play-btn">Play Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="section" style="background-color: var(--light);">
+            <h2>Why Learn History?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-book-history"></i>
+                    </div>
+                    <h3>Understand the Past</h3>
+                    <p>History helps kids understand how past events shape our present world and culture.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Learn from Experience</h3>
+                    <p>Historical lessons teach valuable insights about cause, effect, and human behavior.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Celebrate Achievement</h3>
+                    <p>Learning about historical figures inspires kids and shows the power of individual contributions.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-flag-usa"></i>
+                    </div>
+                    <h3>Build Civic Understanding</h3>
+                    <p>History creates informed citizens who understand their community and nation's development.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Subjects Section -->
+        <section class="section">
+            <h2>Browse Other Subjects</h2>
+            <div class="subjects-grid">
+                <a href="/eduspark/subject/math.html" class="subject-link">
+                    <i class="fas fa-calculator" style="color: #6C63FF;"></i>
+                    Math
+                </a>
+                <a href="/eduspark/subject/reading.html" class="subject-link">
+                    <i class="fas fa-book-open" style="color: #EC4899;"></i>
+                    Reading
+                </a>
+                <a href="/eduspark/subject/science.html" class="subject-link">
+                    <i class="fas fa-flask" style="color: #F59E0B;"></i>
+                    Science
+                </a>
+                <a href="/eduspark/subject/spelling.html" class="subject-link">
+                    <i class="fas fa-spell-check" style="color: #22C55E;"></i>
+                    Spelling
+                </a>
+                <a href="/eduspark/subject/geography.html" class="subject-link">
+                    <i class="fas fa-globe" style="color: #14B8A6;"></i>
+                    Geography
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3><i class="fas fa-bolt"></i> EduSpark</h3>
+                <p style="color:#9CA3AF;line-height:1.8;">Free, curriculum-aligned educational games for kids K-8. Created by educators, loved by families.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Grades</h3>
+                <p><a href="/eduspark/grade/1.html" style="color:#9CA3AF;text-decoration:none;">Grade 1</a></p>
+                <p><a href="/eduspark/grade/2.html" style="color:#9CA3AF;text-decoration:none;">Grade 2</a></p>
+                <p><a href="/eduspark/grade/3.html" style="color:#9CA3AF;text-decoration:none;">Grade 3</a></p>
+                <p><a href="/eduspark/grade/4.html" style="color:#9CA3AF;text-decoration:none;">Grade 4</a></p>
+                <p><a href="/eduspark/grade/5.html" style="color:#9CA3AF;text-decoration:none;">Grade 5</a></p>
+            </div>
+            <div class="footer-column">
+                <h3>Subjects</h3>
+                <p><a href="/eduspark/subject/math.html" style="color:#9CA3AF;text-decoration:none;">Math</a></p>
+                <p><a href="/eduspark/subject/reading.html" style="color:#9CA3AF;text-decoration:none;">Reading</a></p>
+                <p><a href="/eduspark/subject/science.html" style="color:#9CA3AF;text-decoration:none;">Science</a></p>
+                <p><a href="/eduspark/subject/spelling.html" style="color:#9CA3AF;text-decoration:none;">Spelling</a></p>
+                <p><a href="/eduspark/subject/geography.html" style="color:#9CA3AF;text-decoration:none;">Geography</a></p>
+                <p><a href="/eduspark/subject/history.html" style="color:#9CA3AF;text-decoration:none;">History</a></p>
+            </div>
+        </div>
+        <div style="text-align:center;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);color:#9CA3AF;font-size:0.9rem;">
+            <p>&copy; 2026 EduSpark. All rights reserved. <a href="/eduspark/parents.html" style="color:#6C63FF;text-decoration:none;">Parents</a> · <a href="/eduspark/blog/" style="color:#6C63FF;text-decoration:none;">Blog</a></p>
+        </div>
+    </footer>
 </body>
 </html>

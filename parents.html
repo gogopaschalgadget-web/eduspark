@@ -1,268 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6ZLDKMTPKP');
-</script>
     <meta charset="UTF-8">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Parents - EduSpark</title>
+    <meta name="description" content="Explore EduSpark's free, safe, COPPA-compliant educational games. Learn why parents trust our curriculum-aligned games for K-8 learning without ads or data collection.">
+    <title>For Parents | EduSpark - Free Educational Games</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6ZLDKMTPKP');</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .container {
-            max-width: 1000px;
+
+        :root {
+            --primary: #6C63FF;
+            --primary-dark: #5a4fb8;
+            --pink: #EC4899;
+            --teal: #14B8A6;
+            --orange: #F59E0B;
+            --green: #22C55E;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --border: #E5E7EB;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--dark);
+            background-color: white;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            border-bottom: 1px solid var(--border);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 0.4rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: white;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            .nav-links.active {
+                max-height: 300px;
+            }
+
+            .nav-links li {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 1rem 1.5rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        main {
+            margin-top: 80px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            font-size: 0.9rem;
+            color: #6B7280;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
             margin: 0 auto;
         }
-        header {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 40px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 1rem;
         }
-        header h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #6B7280;
+            margin-bottom: 2rem;
         }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Benefits Grid */
         .section {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
         }
+
         .section h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark);
         }
-        .benefits {
+
+        .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
         }
+
         .benefit-card {
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
+            background-color: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
         }
+
+        .benefit-card:hover {
+            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.1);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
         .benefit-card h3 {
-            color: #667eea;
-            margin-bottom: 10px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
         }
-        .coaching-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        .benefit-card p {
+            color: #6B7280;
+            font-size: 0.95rem;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background-color: var(--light);
+            padding: 4rem 1.5rem;
+        }
+
+        .how-it-works-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .how-it-works h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .step {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border-left: 4px solid var(--primary);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
             color: white;
-            padding: 40px;
-            border-radius: 15px;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .step h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .step p {
+            color: #6B7280;
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 1.5rem;
+        }
+
+        .faq-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-icon {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: #6B7280;
+            margin-top: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            margin-top: 1rem;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--pink) 100%);
+            padding: 4rem 1.5rem;
             text-align: center;
         }
-        .coaching-section h2 {
-            color: white;
-            font-size: 2em;
-            margin-bottom: 20px;
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
         }
-        .pricing-grid {
+
+        .cta h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 1.5rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
-        .pricing-card {
-            background: white;
-            color: #333;
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        .price {
-            font-size: 2em;
-            color: #667eea;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-        .lead-form {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #333;
-        }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: Arial, sans-serif;
-        }
-        .btn {
-            padding: 15px 40px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+
+        .footer-column h3 {
             color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1.1em;
-            font-weight: bold;
-            transition: all 0.3s;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
-        .btn:hover {
-            transform: scale(1.05);
+
+        .footer-column p {
+            margin-bottom: 0.5rem;
         }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 30px;
-            border-radius: 15px;
-            margin-top: 40px;
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .section,
+            .how-it-works-content,
+            .faq-content {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .section h2,
+            .how-it-works h2,
+            .faq h2 {
+                font-size: 1.75rem;
+            }
+
+            .benefits-grid,
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🎓 Parent Resources</h1>
-            <p>Supporting your child's learning journey</p>
-        </header>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="/eduspark/" class="logo"><i class="fas fa-bolt"></i> EduSpark</a>
+            <ul class="nav-links">
+                <li><a href="/eduspark/">Home</a></li>
+                <li><a href="/eduspark/parents.html">Parents</a></li>
+                <li><a href="/eduspark/blog/">Blog</a></li>
+            </ul>
+            <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
 
-        <div class="section">
-            <h2>Why EduSpark?</h2>
-            <div class="benefits">
+    <main>
+        <div class="breadcrumb">
+            <a href="/eduspark/">Home</a> > For Parents
+        </div>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>For Parents</h1>
+                <p>Safe, curriculum-aligned educational games your kids will love. Learn why thousands of families trust EduSpark.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Why Parents Choose EduSpark</h2>
+            <div class="benefits-grid">
                 <div class="benefit-card">
-                    <h3>100% Safe</h3>
-                    <p>COPPA-compliant, no data collection. Your child's privacy is our priority.</p>
+                    <i class="fas fa-shield-halved"></i>
+                    <h3>COPPA Compliant</h3>
+                    <p>No data collection, no tracking, no ads. Your child's privacy is completely protected.</p>
                 </div>
                 <div class="benefit-card">
+                    <i class="fas fa-graduation-cap"></i>
                     <h3>Curriculum-Aligned</h3>
-                    <p>Games designed by educators to match state standards.</p>
+                    <p>Games mapped to Common Core and state standards, ensuring educational relevance.</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>Engaging & Fun</h3>
-                    <p>Kids love learning with colorful, interactive games.</p>
+                    <i class="fas fa-ban"></i>
+                    <h3>No Ads for Kids</h3>
+                    <p>Ad-free learning experience. No distractions, just pure educational content.</p>
                 </div>
                 <div class="benefit-card">
+                    <i class="fas fa-chalkboard-user"></i>
+                    <h3>Teacher-Created</h3>
+                    <p>Content designed by certified educators who know how kids learn best.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line"></i>
                     <h3>Progress Tracking</h3>
-                    <p>See how your child improves with our learning games.</p>
+                    <p>See how your child is improving over time with detailed insights. <em>Coming soon</em></p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-mobile-screen"></i>
+                    <h3>All Devices</h3>
+                    <p>Works seamlessly on tablets, phones, and computers wherever learning happens.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2>Get Support from a Tutor</h2>
-            <div class="coaching-section">
-                <h2>1-on-1 Online Tutoring</h2>
-                <p>Expert tutors ready to help your child succeed</p>
+        <section class="how-it-works">
+            <div class="how-it-works-content">
+                <h2>How It Works</h2>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Choose a Grade</h3>
+                        <p>Select your child's grade level (K-8) to find age-appropriate games.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Pick a Subject</h3>
+                        <p>Browse Math, Reading, Science, Spelling, Geography, and History.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Start Learning</h3>
+                        <p>Click play and watch your child learn through fun, interactive games.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h3>Drop-In</h3>
-                        <div class="price">$25/session</div>
-                        <p>Perfect for quick help with homework</p>
+        <section class="faq">
+            <div class="faq-content">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Is EduSpark really free?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </div>
-                    <div class="pricing-card">
-                        <h3>Monthly</h3>
-                        <div class="price">$89/month</div>
-                        <p>4 sessions per month</p>
-                    </div>
-                    <div class="pricing-card" style="transform: scale(1.05); box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                        <h3>Premium</h3>
-                        <div class="price">$199/month</div>
-                        <p>Unlimited sessions + custom plans</p>
+                    <div class="faq-answer">
+                        <p>Yes! EduSpark is completely free with no hidden fees, premium tiers, or subscriptions. We believe quality education should be accessible to all families.</p>
                     </div>
                 </div>
 
-                <form class="lead-form" style="background: rgba(255,255,255,0.9);">
-                    <h3 style="color: #333; margin-bottom: 20px;">Get in Touch with a Tutor</h3>
-
-                    <div class="form-group">
-                        <label>Parent Name *</label>
-                        <input type="text" required placeholder="Your name">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>How is EduSpark different from other learning apps?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </div>
-
-                    <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" required placeholder="your@email.com">
+                    <div class="faq-answer">
+                        <p>EduSpark is created by educators and built with privacy-first principles. We're COPPA compliant, completely ad-free for kids, and our games are directly aligned with school curricula. We focus on learning outcomes, not engagement metrics.</p>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label>Child's Grade *</label>
-                        <select required>
-                            <option>Select grade...</option>
-                            <option>Kindergarten</option>
-                            <option>Grade 1</option>
-                            <option>Grade 2</option>
-                            <option>Grade 3</option>
-                            <option>Grade 4</option>
-                            <option>Grade 5</option>
-                            <option>Grade 6</option>
-                            <option>Grade 7</option>
-                            <option>Grade 8</option>
-                        </select>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>What grades and subjects are available?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </div>
-
-                    <div class="form-group">
-                        <label>Subject Needed *</label>
-                        <select required>
-                            <option>Select subject...</option>
-                            <option>Math</option>
-                            <option>Reading</option>
-                            <option>Science</option>
-                            <option>Spelling</option>
-                            <option>Other</option>
-                        </select>
+                    <div class="faq-answer">
+                        <p>We offer games for Grades 1-5 in Math, Reading, Science, Spelling, Geography, and History. We're continuously expanding our library with new grades and subjects.</p>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label>Preferred Schedule</label>
-                        <select>
-                            <option>Flexible</option>
-                            <option>Weekdays only</option>
-                            <option>Evenings only</option>
-                            <option>Weekends only</option>
-                        </select>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Is my child's data safe?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                     </div>
-
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea placeholder="Tell us about your child's learning needs..." rows="4"></textarea>
+                    <div class="faq-answer">
+                        <p>Absolutely. EduSpark is COPPA compliant, meaning we don't collect, use, or share any personal information from children under 13. There's no tracking, no ads targeted at kids, and no data sales.</p>
                     </div>
+                </div>
 
-                    <button type="submit" class="btn">📧 Get Free Consultation</button>
-                </form>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Can my child play on a tablet or phone?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! All EduSpark games are fully responsive and work on tablets, phones, and computers. You can start a game on one device and continue on another.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Does my child need to create an account?</span>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No account is needed to play games. Simply visit our site, choose a grade and subject, and start learning immediately. No sign-ups, no passwords, no hassle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Start Your Child's Learning Journey Today</h2>
+                <p>Free, safe, and fun educational games for K-8 students. No ads, no data collection, just pure learning.</p>
+                <a href="/eduspark/" class="cta-button">Explore Games</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3><i class="fas fa-bolt"></i> EduSpark</h3>
+                <p style="color:#9CA3AF;line-height:1.8;">Free, curriculum-aligned educational games for kids K-8. Created by educators, loved by families.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Grades</h3>
+                <p><a href="/eduspark/grade/1.html" style="color:#9CA3AF;text-decoration:none;">Grade 1</a></p>
+                <p><a href="/eduspark/grade/2.html" style="color:#9CA3AF;text-decoration:none;">Grade 2</a></p>
+                <p><a href="/eduspark/grade/3.html" style="color:#9CA3AF;text-decoration:none;">Grade 3</a></p>
+                <p><a href="/eduspark/grade/4.html" style="color:#9CA3AF;text-decoration:none;">Grade 4</a></p>
+                <p><a href="/eduspark/grade/5.html" style="color:#9CA3AF;text-decoration:none;">Grade 5</a></p>
+            </div>
+            <div class="footer-column">
+                <h3>Subjects</h3>
+                <p><a href="/eduspark/subject/math.html" style="color:#9CA3AF;text-decoration:none;">Math</a></p>
+                <p><a href="/eduspark/subject/reading.html" style="color:#9CA3AF;text-decoration:none;">Reading</a></p>
+                <p><a href="/eduspark/subject/science.html" style="color:#9CA3AF;text-decoration:none;">Science</a></p>
+                <p><a href="/eduspark/subject/spelling.html" style="color:#9CA3AF;text-decoration:none;">Spelling</a></p>
+                <p><a href="/eduspark/subject/geography.html" style="color:#9CA3AF;text-decoration:none;">Geography</a></p>
+                <p><a href="/eduspark/subject/history.html" style="color:#9CA3AF;text-decoration:none;">History</a></p>
             </div>
         </div>
-
-        <footer>
-            <p>© 2025 EduSpark. Helping kids learn and grow.</p>
-        </footer>
-    </div>
+        <div style="text-align:center;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);color:#9CA3AF;font-size:0.9rem;">
+            <p>&copy; 2026 EduSpark. All rights reserved. <a href="/eduspark/parents.html" style="color:#6C63FF;text-decoration:none;">Parents</a> · <a href="/eduspark/blog/" style="color:#6C63FF;text-decoration:none;">Blog</a></p>
+        </div>
+    </footer>
 </body>
 </html>
