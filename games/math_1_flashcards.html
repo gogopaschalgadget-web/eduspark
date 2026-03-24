@@ -1,343 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Analytics GA4 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Practice 1st grade math with interactive flashcards. Addition and subtraction facts for kids ages 5-7. Free, no login required.">
+<meta name="keywords" content="math, 1, educational game, learning, kids, interactive">
+<title>1st Grade Math Flashcards - EduSpark</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6ZLDKMTPKP');
-</script>
-    <meta charset="UTF-8">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Practice 1st grade math with interactive flashcards. Addition and subtraction facts for kids ages 5-7. Free, no login required.">
-    <meta name="keywords" content="math, 1, educational game, learning, kids, interactive">
-    <title>1st Grade Math Flashcards - EduSpark</title>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "EducationalApplication",
-        "name": "1st Grade Math Flashcards",
-        "description": "Flashcard study tool for math grade 1",
-        "educationalLevel": "Grade 1",
-        "audience": {"@type": "EducationalAudience", "educationalRole": "student"},
-        "learningResourceType": "Interactive Game"
-    }
-    </script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
-            background: #f5f5f5;
-        }
-        .nav {
-            background: #333;
-            padding: 15px;
-            text-align: center;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
-        .nav a:hover { color: #667eea; }
-        .ad-banner {
-            background: white;
-            padding: 15px;
-            text-align: center;
-            color: #999;
-            font-size: 0.9em;
-            border-bottom: 1px solid #ddd;
-        }
-        .game-container {
-            max-width: 900px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .game-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .game-header h1 {
-            font-size: 2em;
-            margin-bottom: 5px;
-        }
-        .game-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 15px;
-            font-size: 0.95em;
-        }
-        .game-content {
-            padding: 20px;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            margin: 20px;
-            background: white;
-        }
-        .footer {
-            background: #f9f9f9;
-            padding: 20px;
-            text-align: center;
-            border-top: 1px solid #eee;
-            color: #666;
-            font-size: 0.9em;
-        }
-        footer a {
-            color: #667eea;
-            text-decoration: none;
-        }
-    </style>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6ZLDKMTPKP');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
+<style>
+:root{--primary:#6C63FF;--pink:#EC4899;--teal:#14B8A6;--orange:#F59E0B;--green:#22C55E;--dark:#1F2937;--light:#F9FAFB;--border:#E5E7EB;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:100%;height:100%;}
+body{font-family:'Nunito',sans-serif;background:var(--light);color:var(--dark);}
+.navbar{background:white;border-bottom:1px solid var(--border);box-shadow:0 2px 4px rgba(0,0,0,0.05);position:sticky;top:0;z-index:100;}
+.navbar-content{max-width:1200px;margin:0 auto;padding:1rem;display:flex;justify-content:space-between;align-items:center;}
+.logo{font-size:1.5rem;font-weight:800;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:0.5rem;}
+.nav-links{display:flex;list-style:none;gap:2rem;}
+.nav-links a{text-decoration:none;color:var(--dark);font-weight:600;transition:color 0.3s;font-size:0.95rem;}
+.nav-links a:hover{color:var(--primary);}
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;}
+.hamburger span{width:25px;height:3px;background:var(--dark);border-radius:2px;transition:0.3s;}
+@media(max-width:768px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:1rem;gap:1rem;border-bottom:1px solid var(--border);}
+.nav-links.active{display:flex;}
+.hamburger{display:flex;}}
+.breadcrumb{max-width:1200px;margin:0 auto;padding:1rem;font-size:0.9rem;color:#666;}
+.breadcrumb a{color:var(--primary);text-decoration:none;}
+.hero{background:linear-gradient(135deg,var(--primary) 0%,#8B5CF6 100%);color:white;padding:3rem 1rem;text-align:center;}
+.hero-content{max-width:800px;margin:0 auto;}
+.hero h1{font-size:2.5rem;font-weight:800;margin-bottom:0.5rem;}
+.hero-meta{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;font-size:1.05rem;margin-top:1rem;}
+.grade-tag{background:rgba(255,255,255,0.3);padding:0.5rem 1rem;border-radius:20px;font-weight:600;}
+.game-section{max-width:800px;margin:2rem auto;padding:0 1rem;}
+.game-card{background:white;border-radius:12px;box-shadow:0 4px 6px rgba(0,0,0,0.1);overflow:hidden;}
+.game-content{padding:2rem;}
+.container{background:white;border-radius:12px;padding:2rem;}
+.header{text-align:center;margin-bottom:2rem;}
+.header h1{color:var(--primary);font-size:2rem;font-weight:800;margin-bottom:0.5rem;}
+.header p{color:#666;font-size:1.05rem;}
+.counter{color:#666;font-size:1.05rem;margin:1rem 0;}
+.instructions{color:#666;font-size:0.95rem;margin:1.5rem 0;padding:1rem;background:var(--light);border-radius:8px;text-align:center;}
+.progress{background:var(--border);height:8px;border-radius:8px;margin:1.5rem 0;overflow:hidden;}
+.progress-bar{background:linear-gradient(90deg,var(--primary),#8B5CF6);height:100%;transition:width 0.3s;border-radius:8px;}
+.flashcard{perspective:1000px;height:300px;margin:2rem 0;cursor:pointer;}
+.flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+.flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+.flashcard-front,.flashcard-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;display:flex;align-items:center;justify-content:center;border-radius:12px;font-size:1.8rem;font-weight:800;padding:2rem;text-align:center;}
+.flashcard-front{background:linear-gradient(135deg,var(--primary),#8B5CF6);color:white;}
+.flashcard-back{background:linear-gradient(135deg,var(--teal),#06B6D4);color:white;transform:rotateY(180deg);}
+.controls{display:flex;justify-content:center;gap:1rem;margin:2rem 0;flex-wrap:wrap;}
+.btn{padding:0.75rem 1.5rem;font-size:1rem;border:none;border-radius:8px;cursor:pointer;transition:all 0.3s;font-weight:700;font-family:'Nunito',sans-serif;}
+.btn-primary{background:linear-gradient(135deg,var(--primary),#8B5CF6);color:white;}
+.btn-primary:hover{transform:scale(1.05);}
+.btn-secondary{background:var(--border);color:var(--dark);font-weight:600;}
+.btn-secondary:hover{background:#D1D5DB;}
+footer{background:var(--dark);color:white;padding:2rem;text-align:center;margin-top:3rem;}
+footer p{margin:0.5rem 0;font-size:0.9rem;}
+footer a{color:var(--primary);text-decoration:none;}
+</style>
 </head>
 <body>
-    <div class="nav">
-        <a href="/">← Back to 1st Grade Math Flashcards</a>
+<nav class="navbar">
+  <div class="navbar-content">
+    <a href="/eduspark/" class="logo"><i class="fas fa-bolt"></i> EduSpark</a>
+    <ul class="nav-links">
+      <li><a href="/eduspark/">Home</a></li>
+      <li><a href="/eduspark/parents.html">Parents</a></li>
+      <li><a href="/eduspark/blog/">Blog</a></li>
+    </ul>
+    <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+      <span></span><span></span><span></span>
     </div>
+  </div>
+</nav>
 
-    <div class="ad-banner">
-        [Sponsor Banner - EduSpark Powered By...]
+<div class="breadcrumb">
+  <a href="/eduspark/">Home</a> > <a href="/eduspark/">Math</a> > 1st Grade Math Flashcards
+</div>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>1st Grade Math Flashcards</h1>
+    <div class="hero-meta">
+      <div class="grade-tag">Grade 1</div>
+      <div class="grade-tag">Math</div>
     </div>
+  </div>
+</div>
 
-    <div class="game-container">
-        <div class="game-header">
-            <h1>1st Grade Math Flashcards</h1>
-            <div class="game-info">
-                <span>Grade 1</span>
-                <span>Math</span>
-                <span>Flashcards</span>
-            </div>
-        </div>
-
-        <div class="game-content">
-            <!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6ZLDKMTPKP');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1st Grade Math Flashcards - EduSpark</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            min-height: 100vh;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            max-width: 600px;
-            width: 100%;
-            padding: 30px;
-            text-align: center;
-        }
-        .header { margin-bottom: 30px; }
-        .header h1 {
-            color: #f5576c;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        .counter {
-            color: #666;
-            font-size: 1.1em;
-            margin: 10px 0;
-        }
-        .flashcard {
-            perspective: 1000px;
-            height: 350px;
-            margin: 30px 0;
-            cursor: pointer;
-        }
-        .flashcard-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-        .flashcard.flipped .flashcard-inner {
-            transform: rotateY(180deg);
-        }
-        .flashcard-front, .flashcard-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 15px;
-            font-size: 1.8em;
-            font-weight: bold;
-        }
-        .flashcard-front {
-            background: linear-gradient(135deg, #f093fb, #f5576c);
-            color: white;
-            padding: 40px;
-        }
-        .flashcard-back {
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
-            color: white;
-            padding: 40px;
-            transform: rotateY(180deg);
-        }
-        .instructions {
-            color: #666;
-            font-size: 0.95em;
-            margin: 20px 0;
-            padding: 10px;
-            background: #f5f5f5;
-            border-radius: 10px;
-        }
-        .controls {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 30px 0;
-            flex-wrap: wrap;
-        }
-        .btn {
-            padding: 12px 25px;
-            font-size: 1em;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: bold;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, #f093fb, #f5576c);
-            color: white;
-        }
-        .btn-primary:hover { transform: scale(1.05); }
-        .btn-secondary {
-            background: #e0e0e0;
-            color: #333;
-        }
-        .btn-secondary:hover { background: #d0d0d0; }
-        .progress {
-            background: #e0e0e0;
-            height: 8px;
-            border-radius: 10px;
-            margin: 20px 0;
-            overflow: hidden;
-        }
-        .progress-bar {
-            background: linear-gradient(90deg, #f093fb, #f5576c);
-            height: 100%;
-            transition: width 0.3s;
-        }
-        .powered-by {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 2px solid #eee;
-            font-size: 0.9em;
-            color: #999;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
+<div class="game-section">
+  <div class="game-card">
+    <div class="game-content">
+      <div class="container">
         <div class="header">
-            <h1>🎴 1st Grade Math Flashcards</h1>
-            <p>Grade 1 • Math</p>
+          <h1>🎴 Flashcard Practice</h1>
+          <p>Learn math facts with flashcards</p>
         </div>
 
         <div class="instructions">👆 Click the card to reveal the answer!</div>
 
         <div class="counter">
-            Card <span id="currentCard">1</span> of <span id="totalCards">0</span>
+          Card <span id="currentCard">1</span> of <span id="totalCards">0</span>
         </div>
 
         <div class="progress">
-            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+          <div class="progress-bar" id="progressBar" style="width: 0%"></div>
         </div>
 
         <div class="flashcard" id="flashcard">
-            <div class="flashcard-inner">
-                <div class="flashcard-front" id="front"></div>
-                <div class="flashcard-back" id="back"></div>
-            </div>
+          <div class="flashcard-inner">
+            <div class="flashcard-front" id="front"></div>
+            <div class="flashcard-back" id="back"></div>
+          </div>
         </div>
 
         <div class="controls">
-            <button class="btn btn-secondary" onclick="previousCard()">← Previous</button>
-            <button class="btn btn-primary" onclick="nextCard()">Next →</button>
+          <button class="btn btn-secondary" onclick="previousCard()">← Previous</button>
+          <button class="btn btn-primary" onclick="nextCard()">Next →</button>
         </div>
-
-        <div class="powered-by">
-            Powered by <strong>EduSpark</strong> — Free Educational Games for Kids
-        </div>
+      </div>
     </div>
+  </div>
+</div>
 
-    <script>
-        const cards = [{"q": "1 + 1 = ?", "a": "2", "opts": ["1", "2", "3"]}, {"q": "2 + 3 = ?", "a": "5", "opts": ["4", "5", "6"]}, {"q": "5 - 2 = ?", "a": "3", "opts": ["2", "3", "4"]}, {"q": "3 + 4 = ?", "a": "7", "opts": ["6", "7", "8"]}, {"q": "10 - 5 = ?", "a": "5", "opts": ["4", "5", "6"]}, {"q": "2 + 2 = ?", "a": "4", "opts": ["3", "4", "5"]}, {"q": "6 + 2 = ?", "a": "8", "opts": ["7", "8", "9"]}, {"q": "9 - 3 = ?", "a": "6", "opts": ["5", "6", "7"]}];
-        let currentCard = 0;
+<footer>
+  <p><strong>EduSpark</strong> - Free Educational Games for Kids</p>
+  <p>© 2025 EduSpark. All rights reserved. | <a href="#">Safety & Privacy</a></p>
+</footer>
 
-        function displayCard() {
-            const card = cards[currentCard];
-            document.getElementById('front').textContent = card.q;
-            document.getElementById('back').textContent = card.a;
-            document.getElementById('currentCard').textContent = currentCard + 1;
-            document.getElementById('totalCards').textContent = cards.length;
-
-            const progress = ((currentCard + 1) / cards.length) * 100;
-            document.getElementById('progressBar').style.width = progress + '%';
-
-            document.getElementById('flashcard').classList.remove('flipped');
-        }
-
-        document.getElementById('flashcard').onclick = function() {
-            this.classList.toggle('flipped');
-        };
-
-        function nextCard() {
-            if (currentCard < cards.length - 1) {
-                currentCard++;
-                displayCard();
-            }
-        }
-
-        function previousCard() {
-            if (currentCard > 0) {
-                currentCard--;
-                displayCard();
-            }
-        }
-
-        displayCard();
-    </script>
-</body>
-</html>
-        </div>
-
-        <div class="footer">
-            <p><strong>EduSpark</strong> - Free Educational Games for Kids</p>
-            <p>© 2025 EduSpark. All rights reserved. | <a href="#">Safety & Privacy</a></p>
-        </div>
-    </div>
+<script>
+const cards=[{"q":"1 + 1 = ?","a":"2","opts":["1","2","3"]},{"q":"2 + 3 = ?","a":"5","opts":["4","5","6"]},{"q":"5 - 2 = ?","a":"3","opts":["2","3","4"]},{"q":"3 + 4 = ?","a":"7","opts":["6","7","8"]},{"q":"10 - 5 = ?","a":"5","opts":["4","5","6"]},{"q":"2 + 2 = ?","a":"4","opts":["3","4","5"]},{"q":"6 + 2 = ?","a":"8","opts":["7","8","9"]},{"q":"9 - 3 = ?","a":"6","opts":["5","6","7"]}];
+let currentCard=0;
+function displayCard(){const card=cards[currentCard];document.getElementById('front').textContent=card.q;document.getElementById('back').textContent=card.a;document.getElementById('currentCard').textContent=currentCard+1;document.getElementById('totalCards').textContent=cards.length;const progress=((currentCard+1)/cards.length)*100;document.getElementById('progressBar').style.width=progress+'%';document.getElementById('flashcard').classList.remove('flipped');}
+document.getElementById('flashcard').onclick=function(){this.classList.toggle('flipped');};
+function nextCard(){if(currentCard<cards.length-1){currentCard++;displayCard();}}
+function previousCard(){if(currentCard>0){currentCard--;displayCard();}}
+displayCard();
+</script>
 </body>
 </html>

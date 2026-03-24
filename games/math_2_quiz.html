@@ -1,399 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Analytics GA4 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free 2 grade math quiz. Interactive game for kids.">
+<meta name="keywords" content="math, 2, educational game, learning, kids, interactive">
+<title>2nd Grade Math Quiz - EduSpark</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6ZLDKMTPKP');
-</script>
-    <meta charset="UTF-8">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free 2nd grade math quiz covering place value, addition, and subtraction within 100. Interactive game aligned to grade 2 standards.">
-    <meta name="keywords" content="math, 2, educational game, learning, kids, interactive">
-    <title>2nd Grade Math Quiz - EduSpark</title>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "EducationalApplication",
-        "name": "2nd Grade Math Quiz",
-        "description": "Interactive quiz to test math skills for grade 2",
-        "educationalLevel": "Grade 2",
-        "audience": {"@type": "EducationalAudience", "educationalRole": "student"},
-        "learningResourceType": "Interactive Game"
-    }
-    </script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
-            background: #f5f5f5;
-        }
-        .nav {
-            background: #333;
-            padding: 15px;
-            text-align: center;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
-        .nav a:hover { color: #667eea; }
-        .ad-banner {
-            background: white;
-            padding: 15px;
-            text-align: center;
-            color: #999;
-            font-size: 0.9em;
-            border-bottom: 1px solid #ddd;
-        }
-        .game-container {
-            max-width: 900px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .game-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .game-header h1 {
-            font-size: 2em;
-            margin-bottom: 5px;
-        }
-        .game-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 15px;
-            font-size: 0.95em;
-        }
-        .game-content {
-            padding: 20px;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            margin: 20px;
-            background: white;
-        }
-        .footer {
-            background: #f9f9f9;
-            padding: 20px;
-            text-align: center;
-            border-top: 1px solid #eee;
-            color: #666;
-            font-size: 0.9em;
-        }
-        footer a {
-            color: #667eea;
-            text-decoration: none;
-        }
-    </style>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6ZLDKMTPKP');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
+<style>
+:root{--primary:#6C63FF;--pink:#EC4899;--teal:#14B8A6;--orange:#F59E0B;--green:#22C55E;--dark:#1F2937;--light:#F9FAFB;--border:#E5E7EB;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:100%;height:100%;}
+body{font-family:'Nunito',sans-serif;background:var(--light);color:var(--dark);}
+.navbar{background:white;border-bottom:1px solid var(--border);box-shadow:0 2px 4px rgba(0,0,0,0.05);position:sticky;top:0;z-index:100;}
+.navbar-content{max-width:1200px;margin:0 auto;padding:1rem;display:flex;justify-content:space-between;align-items:center;}
+.logo{font-size:1.5rem;font-weight:800;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:0.5rem;}
+.nav-links{display:flex;list-style:none;gap:2rem;}
+.nav-links a{text-decoration:none;color:var(--dark);font-weight:600;transition:color 0.3s;font-size:0.95rem;}
+.nav-links a:hover{color:var(--primary);}
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;}
+.hamburger span{width:25px;height:3px;background:var(--dark);border-radius:2px;transition:0.3s;}
+@media(max-width:768px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:1rem;gap:1rem;border-bottom:1px solid var(--border);}.nav-links.active{display:flex;}.hamburger{display:flex;}}
+.breadcrumb{max-width:1200px;margin:0 auto;padding:1rem;font-size:0.9rem;color:#666;}
+.breadcrumb a{color:var(--primary);text-decoration:none;}
+.hero{background:linear-gradient(135deg,var(--primary) 0%,#8B5CF6 100%);color:white;padding:3rem 1rem;text-align:center;}
+.hero-content{max-width:800px;margin:0 auto;}
+.hero h1{font-size:2.5rem;font-weight:800;margin-bottom:0.5rem;}
+.hero-meta{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;font-size:1.05rem;margin-top:1rem;}
+.grade-tag{background:rgba(255,255,255,0.3);padding:0.5rem 1rem;border-radius:20px;font-weight:600;}
+.game-section{max-width:800px;margin:2rem auto;padding:0 1rem;}
+.game-card{background:white;border-radius:12px;box-shadow:0 4px 6px rgba(0,0,0,0.1);overflow:hidden;}
+.game-content{padding:2rem;}
+.container{background:white;border-radius:12px;padding:2rem;}
+.header{text-align:center;margin-bottom:2rem;}
+.header h1{color:var(--primary);font-size:2rem;font-weight:800;margin-bottom:0.5rem;}
+.header p{color:#666;font-size:1.05rem;}
+.counter{color:#666;font-size:1.05rem;margin:1rem 0;}
+.instructions{color:#666;font-size:0.95rem;margin:1.5rem 0;padding:1rem;background:var(--light);border-radius:8px;text-align:center;}
+.progress{background:var(--border);height:8px;border-radius:8px;margin:1.5rem 0;overflow:hidden;}
+.progress-bar{background:linear-gradient(90deg,var(--primary),#8B5CF6);height:100%;transition:width 0.3s;border-radius:8px;}
+.question{background:var(--light);padding:1.5rem;border-radius:12px;margin:1.5rem 0;border-left:4px solid var(--primary);}
+.question-text{font-size:1.3rem;font-weight:700;color:var(--dark);margin-bottom:1.5rem;}
+.options{display:flex;flex-direction:column;gap:0.75rem;}
+.option{padding:1rem;border:2px solid var(--border);border-radius:8px;cursor:pointer;font-size:1rem;transition:all 0.3s;background:white;font-weight:600;}
+.option:hover{border-color:var(--primary);background:rgba(108,99,255,0.05);transform:translateX(4px);}
+.option.selected{background:var(--primary);color:white;border-color:var(--primary);}
+.option.correct{background:#10B981;color:white;border-color:#10B981;}
+.option.incorrect{background:#EF4444;color:white;border-color:#EF4444;}
+.flashcard{perspective:1000px;height:300px;margin:2rem 0;cursor:pointer;}
+.flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+.flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+.flashcard-front,.flashcard-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;display:flex;align-items:center;justify-content:center;border-radius:12px;font-size:1.8rem;font-weight:800;padding:2rem;text-align:center;}
+.flashcard-front{background:linear-gradient(135deg,var(--primary),#8B5CF6);color:white;}
+.flashcard-back{background:linear-gradient(135deg,var(--teal),#06B6D4);color:white;transform:rotateY(180deg);}
+.btn{padding:1rem 2rem;font-size:1rem;border:none;border-radius:8px;cursor:pointer;transition:all 0.3s;font-weight:700;font-family:'Nunito',sans-serif;}
+.btn-primary{background:linear-gradient(135deg,var(--primary),#8B5CF6);color:white;}
+.btn-primary:hover{transform:scale(1.05);box-shadow:0 8px 16px rgba(108,99,255,0.3);}
+.btn-primary:disabled{opacity:0.6;cursor:not-allowed;}
+.btn-secondary{background:var(--border);color:var(--dark);font-weight:600;}
+.btn-secondary:hover{background:#D1D5DB;}
+.controls{display:flex;justify-content:center;gap:1rem;margin:2rem 0;flex-wrap:wrap;}
+.next-btn-container{text-align:center;margin:2rem 0;}
+.results{text-align:center;display:none;}
+.score{font-size:3rem;color:#10B981;font-weight:800;margin:1.5rem 0;}
+.score.warning{color:var(--orange);}
+.score.danger{color:#EF4444;}
+.results-text{font-size:1.2rem;color:#666;margin:1rem 0;}
+.stars{font-size:2rem;margin:1rem 0;}
+footer{background:var(--dark);color:white;padding:2rem;text-align:center;margin-top:3rem;}
+footer p{margin:0.5rem 0;font-size:0.9rem;}
+footer a{color:var(--primary);text-decoration:none;}
+</style>
 </head>
 <body>
-    <div class="nav">
-        <a href="/">← Back to 2nd Grade Math Quiz</a>
+<nav class="navbar">
+  <div class="navbar-content">
+    <a href="/eduspark/" class="logo"><i class="fas fa-bolt"></i> EduSpark</a>
+    <ul class="nav-links">
+      <li><a href="/eduspark/">Home</a></li>
+      <li><a href="/eduspark/parents.html">Parents</a></li>
+      <li><a href="/eduspark/blog/">Blog</a></li>
+    </ul>
+    <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+      <span></span><span></span><span></span>
     </div>
+  </div>
+</nav>
 
-    <div class="ad-banner">
-        [Sponsor Banner - EduSpark Powered By...]
+<div class="breadcrumb">
+  <a href="/eduspark/">Home</a> > <a href="/eduspark/">Math</a> > 2nd Grade Math Quiz
+</div>
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>2nd Grade Math Quiz</h1>
+    <div class="hero-meta">
+      <div class="grade-tag">Grade 2</div>
+      <div class="grade-tag">Math</div>
     </div>
+  </div>
+</div>
 
-    <div class="game-container">
-        <div class="game-header">
-            <h1>2nd Grade Math Quiz</h1>
-            <div class="game-info">
-                <span>Grade 2</span>
-                <span>Math</span>
-                <span>Quiz</span>
-            </div>
-        </div>
-
-        <div class="game-content">
-            <!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6ZLDKMTPKP');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2nd Grade Math Quiz - EduSpark</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            max-width: 700px;
-            width: 100%;
-            padding: 30px;
-        }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-        .progress {
-            background: #e0e0e0;
-            height: 10px;
-            border-radius: 10px;
-            margin: 20px 0;
-            overflow: hidden;
-        }
-        .progress-bar {
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            height: 100%;
-            transition: width 0.3s;
-        }
-        .question {
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius: 15px;
-            margin: 20px 0;
-            border-left: 5px solid #667eea;
-        }
-        .question-text {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .options { display: flex; flex-direction: column; gap: 10px; }
-        .option {
-            padding: 15px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1.1em;
-            transition: all 0.3s;
-            background: white;
-        }
-        .option:hover {
-            border-color: #667eea;
-            background: #f0f4ff;
-            transform: translateX(5px);
-        }
-        .option.selected {
-            background: #667eea;
-            color: white;
-            border-color: #667eea;
-        }
-        .option.correct {
-            background: #4caf50;
-            color: white;
-            border-color: #4caf50;
-        }
-        .option.incorrect {
-            background: #f44336;
-            color: white;
-            border-color: #f44336;
-        }
-        .btn {
-            padding: 15px 30px;
-            font-size: 1.1em;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: bold;
-            margin: 10px 5px;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-        }
-        .btn-primary:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); }
-        .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
-        .results {
-            text-align: center;
-            display: none;
-        }
-        .score {
-            font-size: 3em;
-            color: #4caf50;
-            font-weight: bold;
-            margin: 30px 0;
-        }
-        .score.warning { color: #ff9800; }
-        .score.danger { color: #f44336; }
-        .results-text { font-size: 1.3em; color: #666; margin: 20px 0; }
-        .emoji { font-size: 1.5em; }
-        .stars { font-size: 2em; margin: 20px 0; }
-        .powered-by {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 2px solid #eee;
-            font-size: 0.9em;
-            color: #999;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
+<div class="game-section">
+  <div class="game-card">
+    <div class="game-content">
+      <div class="container">
         <div class="header">
-            <h1>🎓 2nd Grade Math Quiz</h1>
-            <p>Grade 2 • Math</p>
+          <h1>Start Your Quiz</h1>
+          <p>Test your math skills!</p>
         </div>
 
         <div id="quiz">
-            <div class="progress">
-                <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+          <div class="progress">
+            <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+          </div>
+          <div id="questionContainer">
+            <div class="question">
+              <div class="question-text" id="questionText"></div>
+              <div class="options" id="optionsContainer"></div>
             </div>
-            <div id="questionContainer">
-                <div class="question">
-                    <div class="question-text" id="questionText"></div>
-                    <div class="options" id="optionsContainer"></div>
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>Next Question →</button>
-            </div>
+          </div>
+          <div class="next-btn-container">
+            <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>Next Question →</button>
+          </div>
         </div>
 
         <div class="results" id="results">
-            <h2>Great Job! 🎉</h2>
-            <div class="score" id="scoreDisplay"></div>
-            <div class="stars" id="starsDisplay"></div>
-            <div class="results-text" id="resultsText"></div>
-            <button class="btn btn-primary" onclick="location.reload()">Try Again 🔄</button>
+          <h2>Great Job! 🎉</h2>
+          <div class="score" id="scoreDisplay"></div>
+          <div class="stars" id="starsDisplay"></div>
+          <div class="results-text" id="resultsText"></div>
+          <button class="btn btn-primary" onclick="location.reload()">Try Again 🔄</button>
         </div>
-
-        <div class="powered-by">
-            Powered by <strong>EduSpark</strong> — Free Educational Games for Kids
-        </div>
+      </div>
     </div>
+  </div>
+</div>
 
-    <script>
-        const questions = [{"q": "12 + 8 = ?", "a": "20", "opts": ["18", "19", "20"]}, {"q": "15 - 7 = ?", "a": "8", "opts": ["7", "8", "9"]}, {"q": "3 \u00d7 4 = ?", "a": "12", "opts": ["10", "11", "12"]}, {"q": "20 \u00f7 5 = ?", "a": "4", "opts": ["3", "4", "5"]}, {"q": "25 + 15 = ?", "a": "40", "opts": ["38", "39", "40"]}, {"q": "30 - 12 = ?", "a": "18", "opts": ["17", "18", "19"]}, {"q": "6 \u00d7 3 = ?", "a": "18", "opts": ["16", "17", "18"]}, {"q": "24 \u00f7 4 = ?", "a": "6", "opts": ["5", "6", "7"]}];
-        let currentQuestion = 0;
-        let score = 0;
-        let answered = false;
-        let selectedAnswer = null;
+<footer>
+  <p><strong>EduSpark</strong> - Free Educational Games for Kids</p>
+  <p>© 2025 EduSpark. All rights reserved. | <a href="#">Safety & Privacy</a></p>
+</footer>
 
-        function shuffleArray(arr) {
-            const newArr = [...arr];
-            for (let i = newArr.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
-            }
-            return newArr;
-        }
+<script>
+const questions = [{"q": "12 + 8 = ?", "a": "20", "opts": ["18", "19", "20"]}, {"q": "15 - 7 = ?", "a": "8", "opts": ["7", "8", "9"]}, {"q": "3 \u00d7 4 = ?", "a": "12", "opts": ["10", "11", "12"]}, {"q": "20 \u00f7 5 = ?", "a": "4", "opts": ["3", "4", "5"]}, {"q": "25 + 15 = ?", "a": "40", "opts": ["38", "39", "40"]}, {"q": "30 - 12 = ?", "a": "18", "opts": ["17", "18", "19"]}, {"q": "6 \u00d7 3 = ?", "a": "18", "opts": ["16", "17", "18"]}, {"q": "24 \u00f7 4 = ?", "a": "6", "opts": ["5", "6", "7"]}];
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+let selectedAnswer = null;
 
-        function displayQuestion() {
-            const q = questions[currentQuestion];
-            document.getElementById('questionText').textContent = q.q;
+function shuffleArray(arr) {
+  const newArr = [...arr];
+  for (let i = newArr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+  }
+  return newArr;
+}
 
-            const options = shuffleArray(q.opts);
-            const container = document.getElementById('optionsContainer');
-            container.innerHTML = '';
+function displayQuestion() {
+  const q = questions[currentQuestion];
+  document.getElementById('questionText').textContent = q.q;
+  const options = shuffleArray(q.opts);
+  const container = document.getElementById('optionsContainer');
+  container.innerHTML = '';
+  options.forEach(opt => {
+    const div = document.createElement('div');
+    div.className = 'option';
+    div.textContent = opt;
+    div.onclick = () => selectAnswer(opt, div);
+    container.appendChild(div);
+  });
+  document.getElementById('nextBtn').disabled = true;
+  answered = false;
+  selectedAnswer = null;
+  const progress = ((currentQuestion) / questions.length) * 100;
+  document.getElementById('progressBar').style.width = progress + '%';
+}
 
-            options.forEach(opt => {
-                const div = document.createElement('div');
-                div.className = 'option';
-                div.textContent = opt;
-                div.onclick = () => selectAnswer(opt, div);
-                container.appendChild(div);
-            });
+function selectAnswer(answer, element) {
+  if (answered) return;
+  answered = true;
+  selectedAnswer = answer;
+  const q = questions[currentQuestion];
+  const correct = q.a === answer;
+  document.querySelectorAll('.option').forEach(opt => {
+    if (opt.textContent === q.a) opt.classList.add('correct');
+    if (opt === element && !correct) opt.classList.add('incorrect');
+    opt.style.pointerEvents = 'none';
+  });
+  if (correct) score++;
+  document.getElementById('nextBtn').disabled = false;
+}
 
-            document.getElementById('nextBtn').disabled = true;
-            answered = false;
-            selectedAnswer = null;
+function nextQuestion() {
+  currentQuestion++;
+  if (currentQuestion < questions.length) {
+    displayQuestion();
+  } else {
+    showResults();
+  }
+}
 
-            const progress = ((currentQuestion) / questions.length) * 100;
-            document.getElementById('progressBar').style.width = progress + '%';
-        }
+function showResults() {
+  document.getElementById('quiz').style.display = 'none';
+  document.getElementById('results').style.display = 'block';
+  const percentage = Math.round((score / questions.length) * 100);
+  let stars = '⭐';
+  if (percentage >= 80) stars = '⭐⭐⭐';
+  else if (percentage >= 60) stars = '⭐⭐';
+  let scoreClass = 'danger';
+  if (percentage >= 80) scoreClass = '';
+  else if (percentage >= 60) scoreClass = 'warning';
+  document.getElementById('scoreDisplay').textContent = score + '/' + questions.length;
+  document.getElementById('scoreDisplay').className = 'score ' + scoreClass;
+  document.getElementById('starsDisplay').textContent = stars;
+  const messages = ['Awesome job!', 'You\'re doing great!', 'Keep practicing!', 'Nice work!'];
+  const msg = messages[Math.floor(Math.random() * messages.length)];
+  document.getElementById('resultsText').textContent = percentage + '% correct — ' + msg;
+}
 
-        function selectAnswer(answer, element) {
-            if (answered) return;
-            answered = true;
-            selectedAnswer = answer;
-
-            const q = questions[currentQuestion];
-            const correct = q.a === answer;
-
-            document.querySelectorAll('.option').forEach(opt => {
-                if (opt.textContent === q.a) opt.classList.add('correct');
-                if (opt === element && !correct) opt.classList.add('incorrect');
-                opt.style.pointerEvents = 'none';
-            });
-
-            if (correct) score++;
-            document.getElementById('nextBtn').disabled = false;
-        }
-
-        function nextQuestion() {
-            currentQuestion++;
-            if (currentQuestion < questions.length) {
-                displayQuestion();
-            } else {
-                showResults();
-            }
-        }
-
-        function showResults() {
-            document.getElementById('quiz').style.display = 'none';
-            document.getElementById('results').style.display = 'block';
-
-            const percentage = Math.round((score / questions.length) * 100);
-            let stars = '⭐';
-            if (percentage >= 80) stars = '⭐⭐⭐';
-            else if (percentage >= 60) stars = '⭐⭐';
-
-            let scoreClass = 'danger';
-            if (percentage >= 80) scoreClass = '';
-            else if (percentage >= 60) scoreClass = 'warning';
-
-            document.getElementById('scoreDisplay').textContent = score + '/' + questions.length;
-            document.getElementById('scoreDisplay').className = 'score ' + scoreClass;
-            document.getElementById('starsDisplay').textContent = stars;
-
-            const messages = [
-                'Awesome job!',
-                'You\'re doing great!',
-                'Keep practicing!',
-                'Nice work!'
-            ];
-            const msg = messages[Math.floor(Math.random() * messages.length)];
-            document.getElementById('resultsText').textContent = percentage + '% correct — ' + msg;
-        }
-
-        displayQuestion();
-    </script>
-</body>
-</html>
-        </div>
-
-        <div class="footer">
-            <p><strong>EduSpark</strong> - Free Educational Games for Kids</p>
-            <p>© 2025 EduSpark. All rights reserved. | <a href="#">Safety & Privacy</a></p>
-        </div>
-    </div>
+displayQuestion();
+</script>
 </body>
 </html>
