@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd Grade Typing Practice - EduSpark | Educational Games for Kids</title>
+    <meta name="description" content="Fun typing speed game for 2nd and 3rd graders. Practice typing with age-appropriate words, animations, and real-time feedback. Free educational game.">
+    <meta name="keywords" content="typing game, 2nd grade, 3rd grade, typing practice, kids typing, educational game, EduSpark">
+    <meta name="author" content="EduSpark">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="2nd Grade Typing Practice - EduSpark">
+    <meta property="og:description" content="Fun typing speed game for 2nd and 3rd graders. Practice typing with age-appropriate words and animations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduspark.example.com/games/typing_2_game.html">
+    <meta property="og:image" content="https://eduspark.example.com/og-image-typing.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2nd Grade Typing Practice - EduSpark">
+    <meta name="twitter:description" content="Fun typing speed game for 2nd and 3rd graders">
+    <meta name="twitter:image" content="https://eduspark.example.com/og-image-typing.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/eduspark/favicon.ico">
+    <link rel="apple-touch-icon" href="/eduspark/apple-touch-icon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6ZLDKMTPKP');
+    </script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalContent",
+        "name": "2nd Grade Typing Practice",
+        "description": "Interactive typing speed game for 2nd and 3rd graders with fun animations and real-time feedback",
+        "educationalLevel": "ElementaryEducation",
+        "learningResourceType": "Game",
+        "inLanguage": "en-US",
+        "author": {
+            "@type": "Organization",
+            "name": "EduSpark"
+        },
+        "isAccessibleForFree": true,
+        "publisher": {
+            "@type": "Organization",
+            "name": "EduSpark"
+        }
+    }
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508"
+        crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --pink: #EC4899;
+            --teal: #14B8A6;
+            --orange: #F59E0B;
+            --green: #22C55E;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --border: #E5E7EB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: none;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--dark);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: white;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+            .hamburger {
+                display: none;
+            }
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Page Title */
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Game Content */
+        .game-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .game-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Game Container */
+        .game-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        /* Difficulty Selector */
+        .difficulty-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .difficulty-btn {
+            padding: 12px 24px;
+            border: 2px solid var(--border);
+            background: white;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .difficulty-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .difficulty-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Game Status Bar */
+        .game-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .game-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .stat {
+            background: linear-gradient(135deg, var(--light), white);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        /* Game Area */
+        .game-area {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .word-display {
+            font-size: 64px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 30px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: wordBounce 0.5s ease-out;
+        }
+
+        @keyframes wordBounce {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.8);
+            }
+            50% {
+                transform: translateY(5px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .word-display.bounce {
+            animation: wrongBounce 0.4s ease-out;
+        }
+
+        @keyframes wrongBounce {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .input-group {
+            margin-bottom: 30px;
+        }
+
+        .typing-input {
+            width: 100%;
+            padding: 20px;
+            font-size: 24px;
+            border: 3px solid var(--border);
+            border-radius: 12px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .typing-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.1);
+        }
+
+        .typing-input.correct {
+            border-color: var(--green);
+            background-color: rgba(34, 197, 94, 0.1);
+        }
+
+        .typing-input.incorrect {
+            border-color: var(--pink);
+            background-color: rgba(236, 72, 153, 0.1);
+        }
+
+        /* Streak Counter */
+        .streak-display {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--orange);
+            margin-bottom: 20px;
+        }
+
+        /* Start/Reset Buttons */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--pink));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Result Screen */
+        .result-screen {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(236, 72, 153, 0.1));
+            border-radius: 20px;
+            display: none;
+        }
+
+        .result-screen.active {
+            display: block;
+            animation: slideIn 0.4s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .result-message {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .result-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        @media (max-width: 600px) {
+            .result-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .result-stat {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+        }
+
+        .result-stat-label {
+            font-size: 14px;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .result-stat-value {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .result-feedback {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Confetti */
+        .confetti {
+            position: fixed;
+            pointer-events: none;
+        }
+
+        /* Star Burst */
+        .star-burst {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            font-size: 24px;
+        }
+
+        @keyframes starBurst {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(var(--tx), var(--ty)) scale(0);
+            }
+        }
+
+        .star-burst {
+            animation: starBurst 0.8s ease-out forwards;
+        }
+
+        /* Sidebar Ad */
+        .ad-sidebar {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            height: fit-content;
+            position: sticky;
+            top: 90px;
+        }
+
+        @media (max-width: 768px) {
+            .ad-sidebar {
+                position: static;
+                top: auto;
+            }
+        }
+
+        .ad-label {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        /* Instructions */
+        .instructions {
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(34, 197, 94, 0.1));
+            border-left: 4px solid var(--teal);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .instructions h3 {
+            color: var(--teal);
+            margin-bottom: 10px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            color: #666;
+        }
+
+        .instructions li {
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .footer-section a {
+            display: block;
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            color: #999;
+        }
+
+        /* Hidden game area */
+        .game-play {
+            display: none;
+        }
+
+        .game-play.active {
+            display: block;
+        }
+
+        /* Start screen */
+        .game-start {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .game-start.active {
+            display: block;
+        }
+
+        .game-start h2 {
+            font-size: 28px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .game-start p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/eduspark/" class="logo">EduSpark</a>
+            <ul class="nav-links">
+                <li><a href="/eduspark/">Home</a></li>
+                <li><a href="/eduspark/#games">Games</a></li>
+                <li><a href="/eduspark/#subjects">Subjects</a></li>
+                <li><a href="/eduspark/#parents">Parents</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <a href="/eduspark/">Home</a>
+            <a href="/eduspark/#games">Games</a>
+            <a href="/eduspark/#subjects">Subjects</a>
+            <a href="/eduspark/#parents">Parents</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="/eduspark/">Home</a> >
+        <a href="/eduspark/#games">Typing</a> >
+        <span>2nd Grade Typing Practice</span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>🎮 Typing Adventure</h1>
+        <p class="subtitle">2nd & 3rd Grade Typing Practice - Type the words and watch them light up!</p>
+
+        <div class="game-wrapper">
+            <div class="game-container">
+                <!-- Instructions -->
+                <div class="instructions">
+                    <h3>How to Play:</h3>
+                    <ol>
+                        <li>Select your difficulty level</li>
+                        <li>Click "Start Game" to begin</li>
+                        <li>Type the word shown in the blue box</li>
+                        <li>Press Enter or click Submit</li>
+                        <li>Get as many words correct as you can in 60 seconds!</li>
+                    </ol>
+                </div>
+
+                <!-- Difficulty Selector -->
+                <div class="difficulty-selector">
+                    <button class="difficulty-btn active" data-difficulty="easy">🌱 Easy</button>
+                    <button class="difficulty-btn" data-difficulty="medium">🌿 Medium</button>
+                    <button class="difficulty-btn" data-difficulty="hard">🚀 Hard</button>
+                </div>
+
+                <!-- Game Start Screen -->
+                <div class="game-start active">
+                    <h2>Ready to Practice?</h2>
+                    <p>You'll have 60 seconds to type as many words as you can!</p>
+                    <button class="btn btn-primary" id="startBtn">Start Game</button>
+                </div>
+
+                <!-- Game Play Area -->
+                <div class="game-play">
+                    <!-- Game Stats -->
+                    <div class="game-stats">
+                        <div class="stat">
+                            <div class="stat-label">Score</div>
+                            <div class="stat-value" id="score">0</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">Time Left</div>
+                            <div class="stat-value" id="timer">60</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">WPM</div>
+                            <div class="stat-value" id="wpm">0</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">Accuracy</div>
+                            <div class="stat-value" id="accuracy">100%</div>
+                        </div>
+                    </div>
+
+                    <!-- Streak Display -->
+                    <div class="streak-display" id="streakDisplay" style="display: none;"></div>
+
+                    <!-- Game Area -->
+                    <div class="game-area">
+                        <div class="word-display" id="wordDisplay">cat</div>
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                class="typing-input"
+                                id="typingInput"
+                                placeholder="Type the word and press Enter..."
+                                autocomplete="off"
+                                spellcheck="false"
+                            >
+                        </div>
+                        <div class="button-group">
+                            <button class="btn btn-primary" id="submitBtn">Submit</button>
+                            <button class="btn btn-secondary" id="resetBtn">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result Screen -->
+                <div class="result-screen" id="resultScreen">
+                    <div class="result-icon" id="resultIcon">🎉</div>
+                    <div class="result-message" id="resultMessage">Great Job!</div>
+                    <div class="result-stats">
+                        <div class="result-stat">
+                            <div class="result-stat-label">Final Score</div>
+                            <div class="result-stat-value" id="finalScore">0</div>
+                        </div>
+                        <div class="result-stat">
+                            <div class="result-stat-label">Words Per Minute</div>
+                            <div class="result-stat-value" id="finalWPM">0</div>
+                        </div>
+                        <div class="result-stat">
+                            <div class="result-stat-label">Accuracy</div>
+                            <div class="result-stat-value" id="finalAccuracy">100%</div>
+                        </div>
+                    </div>
+                    <div class="result-feedback" id="resultFeedback"></div>
+                    <button class="btn btn-primary" id="playAgainBtn">Play Again</button>
+                </div>
+            </div>
+
+            <!-- Sidebar Ad -->
+            <div class="ad-sidebar">
+                <div class="ad-label">Advertisement</div>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-5182415121977508"
+                     data-ad-slot="1234567890"
+                     data-ad-format="vertical"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>EduSpark</h4>
+                    <a href="/eduspark/">Home</a>
+                    <a href="/eduspark/#games">Games</a>
+                    <a href="/eduspark/#subjects">Subjects</a>
+                    <a href="/eduspark/#parents">Parents</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Projects</h4>
+                    <a href="https://dreamforge.ai">DreamForge AI</a>
+                    <a href="https://tradespro.com">TradesPro</a>
+                    <a href="https://claimcheck.app">ClaimCheck</a>
+                    <a href="https://roothub.app">Root Hub</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Educational Resources</h4>
+                    <a href="/eduspark/#typing">Typing Games</a>
+                    <a href="/eduspark/#math">Math Games</a>
+                    <a href="/eduspark/#reading">Reading</a>
+                    <a href="/eduspark/#science">Science</a>
+                </div>
+                <div class="footer-section">
+                    <h4>For Parents</h4>
+                    <a href="/eduspark/#about">About Us</a>
+                    <a href="/eduspark/#privacy">Privacy Policy</a>
+                    <a href="/eduspark/#terms">Terms of Service</a>
+                    <a href="/eduspark/#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EduSpark. All rights reserved. | Made with ❤️ for K-8 students</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Word Lists by Difficulty
+        const wordLists = {
+            easy: ['cat', 'dog', 'run', 'sun', 'book', 'tree', 'fish', 'bird', 'play', 'jump', 'cake', 'star', 'moon', 'rain', 'home', 'door', 'ball', 'milk', 'hand', 'ring', 'king', 'lake', 'frog', 'bear', 'boat', 'kite', 'drum', 'nest', 'seed', 'wave', 'hill', 'wind', 'snow', 'fire', 'corn', 'duck', 'leaf', 'pony', 'goat', 'wolf'],
+            medium: ['happy', 'friend', 'school', 'pencil', 'garden', 'family', 'animal', 'teacher', 'bicycle', 'rainbow', 'elephant', 'library', 'person', 'number', 'letter', 'pocket', 'blanket', 'brother', 'sister', 'mother', 'father', 'student', 'circle', 'square', 'orange', 'purple', 'dragon', 'castle', 'bridge', 'forest', 'moment', 'window', 'shadow', 'corner', 'bottom'],
+            hard: ['beautiful', 'important', 'adventure', 'example', 'wonderful', 'different', 'together', 'remember', 'understand', 'favourite', 'question', 'afternoon', 'breakfast', 'tomorrow', 'yesterday', 'Christmas', 'birthday', 'weekend', 'holiday', 'restaurant', 'chocolate', 'strawberry', 'butterfly', 'caterpillar', 'watermelon', 'dictionary', 'everybody', 'everywhere', 'something', 'anything', 'nothing', 'library', 'probably', 'special', 'picture', 'trouble']
+        };
+
+        // Game State
+        let gameState = {
+            isPlaying: false,
+            currentDifficulty: 'easy',
+            currentWord: '',
+            score: 0,
+            attempts: 0,
+            streak: 0,
+            timeLeft: 60,
+            startTime: null,
+            words: [],
+            wordIndex: 0
+        };
+
+        // Elements
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const difficultyBtns = document.querySelectorAll('.difficulty-btn');
+        const startBtn = document.getElementById('startBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const playAgainBtn = document.getElementById('playAgainBtn');
+        const typingInput = document.getElementById('typingInput');
+        const wordDisplay = document.getElementById('wordDisplay');
+        const scoreDisplay = document.getElementById('score');
+        const timerDisplay = document.getElementById('timer');
+        const wpmDisplay = document.getElementById('wpm');
+        const accuracyDisplay = document.getElementById('accuracy');
+        const streakDisplay = document.getElementById('streakDisplay');
+        const gameStart = document.querySelector('.game-start');
+        const gamePlay = document.querySelector('.game-play');
+        const resultScreen = document.getElementById('resultScreen');
+
+        // Hamburger Menu Toggle
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Difficulty Selection
+        difficultyBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                if (!gameState.isPlaying) {
+                    difficultyBtns.forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    gameState.currentDifficulty = e.target.dataset.difficulty;
+                }
+            });
+        });
+
+        // Start Game
+        startBtn.addEventListener('click', startGame);
+
+        function startGame() {
+            gameState.isPlaying = true;
+            gameState.score = 0;
+            gameState.attempts = 0;
+            gameState.streak = 0;
+            gameState.timeLeft = 60;
+            gameState.wordIndex = 0;
+            gameState.startTime = Date.now();
+            gameState.words = [...wordLists[gameState.currentDifficulty]].sort(() => Math.random() - 0.5);
+
+            gameStart.classList.remove('active');
+            gamePlay.classList.add('active');
+            resultScreen.classList.remove('active');
+
+            // Disable difficulty buttons
+            difficultyBtns.forEach(btn => btn.disabled = true);
+
+            updateDisplay();
+            getNewWord();
+            typingInput.focus();
+
+            // Timer
+            const timerInterval = setInterval(() => {
+                gameState.timeLeft--;
+                timerDisplay.textContent = gameState.timeLeft;
+
+                if (gameState.timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    endGame();
+                }
+            }, 1000);
+        }
+
+        function getNewWord() {
+            if (gameState.wordIndex >= gameState.words.length) {
+                gameState.words = [...wordLists[gameState.currentDifficulty]].sort(() => Math.random() - 0.5);
+                gameState.wordIndex = 0;
+            }
+            gameState.currentWord = gameState.words[gameState.wordIndex].toLowerCase();
+            gameState.wordIndex++;
+            wordDisplay.textContent = gameState.currentWord;
+            wordDisplay.classList.remove('bounce');
+            typingInput.value = '';
+            typingInput.classList.remove('correct', 'incorrect');
+            updateStreakDisplay();
+        }
+
+        function submitAnswer() {
+            if (!gameState.isPlaying) return;
+
+            const userAnswer = typingInput.value.toLowerCase().trim();
+            gameState.attempts++;
+
+            if (userAnswer === gameState.currentWord) {
+                // Correct!
+                gameState.score++;
+                gameState.streak++;
+                typingInput.classList.add('correct');
+
+                // Star burst animation
+                createStarBurst();
+
+                // Get next word
+                setTimeout(() => {
+                    getNewWord();
+                }, 300);
+            } else if (userAnswer.length > 0) {
+                // Incorrect
+                gameState.streak = 0;
+                typingInput.classList.add('incorrect');
+                wordDisplay.classList.add('bounce');
+                updateStreakDisplay();
+            }
+
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            scoreDisplay.textContent = gameState.score;
+            wpmDisplay.textContent = calculateWPM();
+            accuracyDisplay.textContent = calculateAccuracy();
+        }
+
+        function calculateWPM() {
+            if (gameState.score === 0) return 0;
+            const timeElapsed = (Date.now() - gameState.startTime) / 1000 / 60;
+            return Math.round(gameState.score / timeElapsed);
+        }
+
+        function calculateAccuracy() {
+            if (gameState.attempts === 0) return '100%';
+            const accuracy = Math.round((gameState.score / gameState.attempts) * 100);
+            return accuracy + '%';
+        }
+
+        function updateStreakDisplay() {
+            if (gameState.streak > 0) {
+                streakDisplay.style.display = 'block';
+                if (gameState.streak === 1) {
+                    streakDisplay.textContent = '✨ Keep going!';
+                } else if (gameState.streak === 3) {
+                    streakDisplay.textContent = '🔥 Great streak! (3)';
+                } else if (gameState.streak === 5) {
+                    streakDisplay.textContent = '🚀 Amazing! (5 in a row)';
+                } else if (gameState.streak > 5) {
+                    streakDisplay.textContent = `🌟 You\'re on fire! (${gameState.streak})`;
+                }
+            } else {
+                streakDisplay.style.display = 'none';
+            }
+        }
+
+        function createStarBurst() {
+            for (let i = 0; i < 6; i++) {
+                const star = document.createElement('div');
+                star.textContent = '⭐';
+                star.className = 'star-burst';
+                const angle = (i / 6) * Math.PI * 2;
+                const distance = 80;
+                star.style.setProperty('--tx', Math.cos(angle) * distance + 'px');
+                star.style.setProperty('--ty', Math.sin(angle) * distance + 'px');
+                wordDisplay.appendChild(star);
+                setTimeout(() => star.remove(), 800);
+            }
+        }
+
+        function endGame() {
+            gameState.isPlaying = false;
+            gamePlay.classList.remove('active');
+            resultScreen.classList.add('active');
+
+            const finalWPM = calculateWPM();
+            const finalAccuracy = calculateAccuracy();
+
+            document.getElementById('finalScore').textContent = gameState.score;
+            document.getElementById('finalWPM').textContent = finalWPM;
+            document.getElementById('finalAccuracy').textContent = finalAccuracy;
+
+            // Set result message and icon based on score
+            let message, icon, feedback;
+            if (gameState.score >= 30) {
+                message = 'Amazing! 🌟';
+                icon = '🏆';
+                feedback = 'You\'re a typing superstar! Keep practicing to get even faster!';
+            } else if (gameState.score >= 20) {
+                message = 'Excellent! 🎉';
+                icon = '🎊';
+                feedback = 'Great job! You\'re improving every time!';
+            } else if (gameState.score >= 10) {
+                message = 'Good Job! 👍';
+                icon = '😊';
+                feedback = 'Nice work! Practice makes perfect!';
+            } else {
+                message = 'Keep Trying! 💪';
+                icon = '😄';
+                feedback = 'Great effort! Play again to improve your score!';
+            }
+
+            document.getElementById('resultMessage').textContent = message;
+            document.getElementById('resultIcon').textContent = icon;
+            document.getElementById('resultFeedback').textContent = feedback;
+
+            // Re-enable difficulty buttons
+            difficultyBtns.forEach(btn => btn.disabled = false);
+        }
+
+        function resetGame() {
+            gameState.isPlaying = false;
+            gameStart.classList.add('active');
+            gamePlay.classList.remove('active');
+            resultScreen.classList.remove('active');
+
+            // Reset displays
+            scoreDisplay.textContent = '0';
+            timerDisplay.textContent = '60';
+            wpmDisplay.textContent = '0';
+            accuracyDisplay.textContent = '100%';
+            streakDisplay.style.display = 'none';
+
+            typingInput.value = '';
+            typingInput.classList.remove('correct', 'incorrect');
+
+            // Re-enable difficulty buttons
+            difficultyBtns.forEach(btn => btn.disabled = false);
+        }
+
+        // Event Listeners
+        submitBtn.addEventListener('click', submitAnswer);
+        typingInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                submitAnswer();
+            }
+        });
+        resetBtn.addEventListener('click', resetGame);
+        playAgainBtn.addEventListener('click', startGame);
+
+        // Focus on input when game starts
+        typingInput.addEventListener('focus', () => {
+            if (gameState.isPlaying) {
+                typingInput.classList.remove('correct', 'incorrect');
+            }
+        });
+
+        // GA4 Event Tracking
+        function trackEvent(eventName, eventData) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, eventData);
+            }
+        }
+
+        // Track game start
+        startBtn.addEventListener('click', () => {
+            trackEvent('game_start', {
+                game_name: 'typing_adventure_2',
+                difficulty: gameState.currentDifficulty
+            });
+        });
+
+        // Track game completion
+        function trackGameCompletion() {
+            trackEvent('game_complete', {
+                game_name: 'typing_adventure_2',
+                score: gameState.score,
+                difficulty: gameState.currentDifficulty,
+                accuracy: calculateAccuracy(),
+                wpm: calculateWPM()
+            });
+        }
+
+        const originalEndGame = endGame;
+        endGame = function() {
+            trackGameCompletion();
+            originalEndGame();
+        };
+    </script>
+</body>
+</html>
