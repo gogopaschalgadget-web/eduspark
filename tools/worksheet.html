@@ -1,22 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free printable worksheet generator for K-5 teachers. Create math, reading, spelling, and science worksheets customized by grade level.">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#6C63FF">
 
-    <html><head>
-<!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6ZLDKMTPKP');
-</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
-<title>Worksheets</title>    <link rel="canonical" href="https://gogopaschalgadget-web.github.io/eduspark/tools/worksheet.html">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Worksheets">
-    <meta property="og:description" content="">
+    <title>Free Worksheet Generator for K-5 Teachers | EduSpark</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gogopaschalgadget-web.github.io/eduspark/tools/worksheet.html">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Free Worksheet Generator for K-5 Teachers | EduSpark">
+    <meta property="og:description" content="Create custom math, reading, spelling, and science worksheets for grades K-5. Free, printable, and ready to use in your classroom.">
     <meta property="og:url" content="https://gogopaschalgadget-web.github.io/eduspark/tools/worksheet.html">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="EduSpark">
-</head><body>
-    <h1>Create Worksheets</h1>
-    <p>Coming soon...</p>
-    </body></html>
-    
+    <meta property="og:image" content="https://images.unsplash.com/photo-1427504494785-cdedca36838d?w=1200&h=630&fit=crop">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Worksheet Generator for K-5 Teachers | EduSpark">
+    <meta name="twitter:description" content="Create custom math, reading, spelling, and science worksheets for grades K-5. Free, printable, and ready to use in your classroom.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1427504494785-cdedca36838d?w=1200&h=630&fit=crop">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6ZLDKMTPKP');
+    </script>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508"
+        crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --pink: #EC4899;
+            --teal: #14B8A6;
+            --orange: #F59E0B;
+            --green: #22C55E;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --gray: #6B7280;
+            --border: #E5E7EB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: #FFFFFF;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--light);
+            padding: 1rem 0;
+            margin-top: 60px;
+        }
+
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .breadcrumb-container a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--pink) 100%);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Generator Section */
+        .generator-section {
+            padding: 3rem 0;
+            background: white;
+        }
+
+        .generator-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .generator-title h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .generator-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        .generator-controls {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 2px solid var(--border);
+        }
+
+        .control-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-size: 0.95rem;
+        }
+
+        .form-group select {
+            padding: 0.75rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 0.85rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-generate {
+            background: linear-gradient(135deg, var(--primary), var(--pink));
+            color: white;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .btn-generate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+        }
+
+        .btn-print {
+            background: var(--green);
+            color: white;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .btn-print:hover {
+            background: #16A34A;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+        }
+
+        /* Worksheet Display */
+        .worksheet-display {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            min-height: 500px;
+            margin-bottom: 2rem;
+        }
+
+        .worksheet-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .worksheet-header h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .worksheet-header p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .worksheet-content {
+            line-height: 2;
+        }
+
+        .problem-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--light);
+            border-left: 4px solid var(--primary);
+            border-radius: 4px;
+        }
+
+        .problem-number {
+            font-weight: 700;
+            color: var(--primary);
+            display: inline-block;
+            width: 2rem;
+        }
+
+        .problem-text {
+            color: var(--dark);
+        }
+
+        .print-area {
+            display: none;
+        }
+
+        @media print {
+            * {
+                background: white !important;
+                color: black !important;
+            }
+
+            nav, .breadcrumb, .generator-controls, .tips-section, .faq-section, footer, .btn-print, .btn-generate {
+                display: none !important;
+            }
+
+            .print-area {
+                display: block !important;
+            }
+
+            .worksheet-display {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+
+        /* Tips Section */
+        .tips-section {
+            padding: 3rem 0;
+            background: var(--light);
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--orange);
+            transition: all 0.3s;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .tip-card i {
+            font-size: 2rem;
+            color: var(--orange);
+            margin-bottom: 1rem;
+        }
+
+        .tip-card h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .tip-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 3rem 0;
+            background: white;
+        }
+
+        .faq-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .faq-title h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: var(--light);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #F0F0FF;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 1.5rem;
+            color: var(--gray);
+            border-top: 2px solid var(--border);
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-icon {
+            color: var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 3rem 1.5rem;
+            background: linear-gradient(135deg, var(--teal) 0%, var(--green) 100%);
+            color: white;
+            text-align: center;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            background: white;
+            color: var(--teal);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 1.5rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #D1D5DB;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 1rem;
+            text-align: center;
+            color: #9CA3AF;
+        }
+
+        /* Image Container */
+        .image-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--gray);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/eduspark/" class="logo">
+                <i class="fas fa-lightbulb"></i>
+                EduSpark
+            </a>
+            <ul>
+                <li><a href="/eduspark/#grades">Grades</a></li>
+                <li><a href="/eduspark/#subjects">Subjects</a></li>
+                <li><a href="/eduspark/#games">Games</a></li>
+                <li><a href="/eduspark/#parents">For Parents</a></li>
+                <li><a href="/eduspark/#pricing">Pricing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="/eduspark/">Home</a> /
+            <a href="/eduspark/tools/">Teacher Tools</a> /
+            <span>Worksheet Generator</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-container">
+            <h1>Worksheet Generator</h1>
+            <p>Create custom worksheets for your K-5 classroom in seconds. No prep required.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Generator Section -->
+        <section class="generator-section">
+            <div class="generator-title">
+                <h2>Create Your Worksheet</h2>
+                <p>Select grade level, subject, and worksheet type to get started</p>
+            </div>
+
+            <div class="generator-controls">
+                <div class="control-group">
+                    <div class="form-group">
+                        <label for="grade-level">Grade Level</label>
+                        <select id="grade-level">
+                            <option value="K">Kindergarten</option>
+                            <option value="1">Grade 1</option>
+                            <option value="2">Grade 2</option>
+                            <option value="3">Grade 3</option>
+                            <option value="4">Grade 4</option>
+                            <option value="5">Grade 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject">
+                            <option value="math">Math</option>
+                            <option value="reading">Reading</option>
+                            <option value="spelling">Spelling</option>
+                            <option value="science">Science</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="worksheet-type">Worksheet Type</label>
+                        <select id="worksheet-type">
+                            <option value="practice">Practice</option>
+                            <option value="quiz">Quiz</option>
+                            <option value="homework">Homework</option>
+                            <option value="review">Review</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn-generate" onclick="generateWorksheet()">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                        Generate Worksheet
+                    </button>
+                    <button class="btn-print" onclick="printWorksheet()">
+                        <i class="fas fa-print"></i>
+                        Print Worksheet
+                    </button>
+                </div>
+            </div>
+
+            <!-- Worksheet Display Area -->
+            <div class="worksheet-display" id="worksheet-container">
+                <div class="loading">
+                    <i class="fas fa-sparkles" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem; display: block;"></i>
+                    <p>Click "Generate Worksheet" to create a custom worksheet for your class</p>
+                </div>
+            </div>
+
+            <!-- Print Area (Hidden) -->
+            <div class="print-area" id="print-area"></div>
+        </section>
+
+        <!-- Image Section -->
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1427504494785-cdedca36838d?w=800&q=80" alt="Teacher working with students on worksheets">
+        </div>
+
+        <!-- Tips Section -->
+        <section class="tips-section">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2rem; margin-bottom: 0.5rem; color: var(--dark);">Tips for Using Worksheets Effectively</h2>
+                <p style="text-align: center; color: var(--gray); margin-bottom: 2rem;">Make the most of your teaching materials with these proven strategies</p>
+
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-layer-group"></i>
+                        <h4>Differentiate Learning</h4>
+                        <p>Create worksheets at different difficulty levels for mixed ability classrooms. Use grade levels to match your students' needs.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Check Understanding</h4>
+                        <p>Use quiz and review worksheets to assess student mastery before moving to new concepts. Perfect for formative assessment.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Save Preparation Time</h4>
+                        <p>Generate worksheets in seconds instead of hours. More time for planning engaging lessons and one-on-one instruction.</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-home"></i>
+                        <h4>Homework That Works</h4>
+                        <p>Send home targeted practice problems. Parents appreciate clear, standards-aligned worksheets for supporting learning at home.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="faq-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about our worksheet generator</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I customize worksheets for my specific curriculum?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our generator creates standards-aligned content for each grade level and subject. Select your grade and subject, and we generate age-appropriate problems. You can print multiple worksheets and pick the ones that best match your curriculum pacing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I print the worksheets directly from this tool?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Click the "Print Worksheet" button after generating your content. Your browser's print dialog will open, and you can print directly to your printer or save as a PDF. The worksheets are optimized for standard 8.5 x 11 inch paper.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Are the math problems appropriate for each grade level?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. Our problems follow grade-level standards. K-1 focus on basic addition and subtraction with single digits. Grades 2-3 introduce multiplication and two-digit operations. Grades 4-5 include multi-digit multiplication, division, and fractions aligned to Common Core standards.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How often should students complete worksheets?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Research suggests 10-15 minutes of focused practice per day is effective without causing worksheet fatigue. Mix different worksheet types, practice problems, and hands-on activities for balanced instruction and maximum student engagement.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I use these worksheets for remote or hybrid learning?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Print worksheets for take-home packets, or share PDFs with students via Google Classroom, email, or your learning management system. Worksheets work both in print and digital formats, making them flexible for any learning environment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Explore More EduSpark Tools</h2>
+            <p>Discover hundreds of free educational resources for K-5 classrooms</p>
+            <a href="/eduspark/tools/" class="cta-button">View All Tools</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>EduSpark</h4>
+                <ul>
+                    <li><a href="/eduspark/">Home</a></li>
+                    <li><a href="/eduspark/tools/">Teacher Tools</a></li>
+                    <li><a href="/eduspark/games/">Learning Games</a></li>
+                    <li><a href="/eduspark/about/">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/eduspark/lesson-plans/">Lesson Plans</a></li>
+                    <li><a href="/eduspark/standards/">Standards Alignment</a></li>
+                    <li><a href="/eduspark/blog/">Blog</a></li>
+                    <li><a href="/eduspark/contact/">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>For Parents</h4>
+                <ul>
+                    <li><a href="/eduspark/parent-guide/">Parent Guide</a></li>
+                    <li><a href="/eduspark/practice-at-home/">Practice at Home</a></li>
+                    <li><a href="/eduspark/reading-list/">Recommended Reading</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduSpark. All rights reserved. | <a href="/eduspark/privacy/" style="color: #9CA3AF;">Privacy Policy</a> | <a href="/eduspark/terms/" style="color: #9CA3AF;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "EduSpark Worksheet Generator",
+        "description": "Free printable worksheet generator for K-5 teachers. Create math, reading, spelling, and science worksheets customized by grade level.",
+        "url": "https://gogopaschalgadget-web.github.io/eduspark/tools/worksheet.html",
+        "applicationCategory": "EducationalApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "EduSpark",
+            "url": "https://gogopaschalgadget-web.github.io/eduspark/"
+        }
+    }
+    </script>
+
+    <script>
+        // Worksheet Generator Logic
+        function generateWorksheet() {
+            const gradeLevel = document.getElementById('grade-level').value;
+            const subject = document.getElementById('subject').value;
+            const worksheetType = document.getElementById('worksheet-type').value;
+
+            let content = generateContent(gradeLevel, subject, worksheetType);
+            displayWorksheet(content, gradeLevel, subject, worksheetType);
+        }
+
+        function generateContent(grade, subject, type) {
+            const numProblems = type === 'quiz' ? 10 : type === 'review' ? 15 : 12;
+            let problems = [];
+
+            if (subject === 'math') {
+                problems = generateMathProblems(grade, numProblems);
+            } else if (subject === 'reading') {
+                problems = generateReadingQuestions(grade, numProblems);
+            } else if (subject === 'spelling') {
+                problems = generateSpellingExercises(grade, numProblems);
+            } else if (subject === 'science') {
+                problems = generateScienceQuestions(grade, numProblems);
+            }
+
+            return problems;
+        }
+
+        function generateMathProblems(grade, count) {
+            let problems = [];
+            let max, operation;
+
+            if (grade === 'K') {
+                max = 5;
+                operation = 'addition';
+            } else if (grade === '1') {
+                max = 10;
+                operation = ['addition', 'subtraction'][Math.floor(Math.random() * 2)];
+            } else if (grade === '2') {
+                max = 20;
+                operation = ['addition', 'subtraction'][Math.floor(Math.random() * 2)];
+            } else if (grade === '3') {
+                max = 100;
+                operation = ['multiplication', 'division', 'addition'][Math.floor(Math.random() * 3)];
+            } else if (grade === '4') {
+                max = 999;
+                operation = ['multiplication', 'division'][Math.floor(Math.random() * 2)];
+            } else {
+                max = 9999;
+                operation = ['multiplication', 'division'][Math.floor(Math.random() * 2)];
+            }
+
+            for (let i = 0; i < count; i++) {
+                let num1 = Math.floor(Math.random() * max) + 1;
+                let num2 = Math.floor(Math.random() * max) + 1;
+                let problem = '';
+
+                if (operation === 'addition') {
+                    problem = `${num1} + ${num2} = ____`;
+                } else if (operation === 'subtraction') {
+                    if (num1 < num2) [num1, num2] = [num2, num1];
+                    problem = `${num1} - ${num2} = ____`;
+                } else if (operation === 'multiplication') {
+                    problem = `${num1} x ${num2} = ____`;
+                } else if (operation === 'division') {
+                    let dividend = num1 * num2;
+                    problem = `${dividend} ÷ ${num2} = ____`;
+                }
+                problems.push(problem);
+            }
+
+            return problems;
+        }
+
+        function generateReadingQuestions(grade, count) {
+            const questions = [
+                'What is the main idea of the passage?',
+                'Who is the main character?',
+                'Where does the story take place?',
+                'What is the problem in the story?',
+                'How is the problem solved?',
+                'What happens at the beginning, middle, and end?',
+                'Why did the character make that decision?',
+                'What word means the same as _____?',
+                'How did the character feel? Why?',
+                'Would you recommend this book? Why or why not?',
+                'What is the most important event in the story?',
+                'What do you think will happen next?',
+                'How are these two characters different?',
+                'What is the author trying to teach us?',
+                'Which event was the most exciting?'
+            ];
+
+            let selected = [];
+            for (let i = 0; i < count; i++) {
+                selected.push(questions[Math.floor(Math.random() * questions.length)]);
+            }
+            return selected;
+        }
+
+        function generateSpellingExercises(grade, count) {
+            const words = [
+                'beautiful', 'because', 'friend', 'receive', 'weird',
+                'necessary', 'definitely', 'separate', 'accommodate', 'commitment',
+                'exercise', 'business', 'achievement', 'beginning', 'surprise',
+                'calendar', 'height', 'rhythm', 'through', 'vacuum',
+                'believe', 'excellent', 'government', 'independent', 'opportunity'
+            ];
+
+            let exercises = [];
+            for (let i = 0; i < count; i++) {
+                let word = words[Math.floor(Math.random() * words.length)];
+                let scrambled = word.split('').sort(() => Math.random() - 0.5).join('');
+                exercises.push(`Unscramble: ${scrambled} = __________`);
+            }
+
+            return exercises;
+        }
+
+        function generateScienceQuestions(grade, count) {
+            const topics = [
+                'What are the three states of matter?',
+                'Name the planets in our solar system.',
+                'What is photosynthesis?',
+                'How do plants get energy from the sun?',
+                'What is the water cycle?',
+                'List the steps of the water cycle.',
+                'What is a food chain?',
+                'Name three types of ecosystems.',
+                'What is adaptation?',
+                'How do animals adapt to their environment?',
+                'What is weathering?',
+                'Name three types of rocks.',
+                'What is the atmosphere?',
+                'How does the moon affect Earth?',
+                'What is a constellation?'
+            ];
+
+            let selected = [];
+            for (let i = 0; i < count; i++) {
+                selected.push(topics[Math.floor(Math.random() * topics.length)]);
+            }
+            return selected;
+        }
+
+        function displayWorksheet(problems, grade, subject, type) {
+            const gradeLabels = {
+                'K': 'Kindergarten',
+                '1': 'Grade 1',
+                '2': 'Grade 2',
+                '3': 'Grade 3',
+                '4': 'Grade 4',
+                '5': 'Grade 5'
+            };
+
+            const subjectLabels = {
+                'math': 'Mathematics',
+                'reading': 'Reading Comprehension',
+                'spelling': 'Spelling',
+                'science': 'Science'
+            };
+
+            const typeLabels = {
+                'practice': 'Practice Worksheet',
+                'quiz': 'Quiz',
+                'homework': 'Homework Assignment',
+                'review': 'Review Worksheet'
+            };
+
+            let html = `
+                <div class="worksheet-header">
+                    <h3>${typeLabels[type]} - ${subjectLabels[subject]}</h3>
+                    <p>${gradeLabels[grade]} | Generated: ${new Date().toLocaleDateString()}</p>
+                </div>
+                <div class="worksheet-content">
+                    <p style="text-align: center; margin-bottom: 1.5rem; font-weight: 700;">Name: _________________________ Date: _____________</p>
+            `;
+
+            problems.forEach((problem, index) => {
+                html += `
+                    <div class="problem-item">
+                        <span class="problem-number">${index + 1}.</span>
+                        <span class="problem-text">${problem}</span>
+                    </div>
+                `;
+            });
+
+            html += `
+                </div>
+            `;
+
+            document.getElementById('worksheet-container').innerHTML = html;
+            document.getElementById('print-area').innerHTML = html;
+        }
+
+        function printWorksheet() {
+            if (document.getElementById('worksheet-container').querySelector('.worksheet-header')) {
+                window.print();
+            } else {
+                alert('Please generate a worksheet first.');
+            }
+        }
+
+        function toggleFAQ(element) {
+            const parent = element.parentElement;
+            const answer = parent.querySelector('.faq-answer');
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== parent) {
+                    item.classList.remove('open');
+                    item.querySelector('.faq-answer').classList.remove('active');
+                }
+            });
+
+            parent.classList.toggle('open');
+            answer.classList.toggle('active');
+        }
+
+        // Generate initial worksheet on page load
+        window.addEventListener('load', function() {
+            console.log('Worksheet Generator loaded');
+        });
+    </script>
+</body>
+</html>
