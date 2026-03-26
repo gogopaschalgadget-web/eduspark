@@ -1,22 +1,971 @@
-
-    <html><head>
-<!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6ZLDKMTPKP');
-</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
-<title>Lesson Plans</title>    <link rel="canonical" href="https://gogopaschalgadget-web.github.io/eduspark/tools/lesson_plan.html">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Lesson Plans">
-    <meta property="og:description" content="">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free AI-powered lesson plan generator for K-5 teachers. Create standards-aligned lesson plans in minutes for math, reading, science, and more.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Free Lesson Plan Generator for K-5 Teachers | EduSpark">
+    <meta property="og:description" content="Free AI-powered lesson plan generator for K-5 teachers. Create standards-aligned lesson plans in minutes for math, reading, science, and more.">
     <meta property="og:url" content="https://gogopaschalgadget-web.github.io/eduspark/tools/lesson_plan.html">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="EduSpark">
-</head><body>
-    <h1>Create Lesson Plans</h1>
-    <p>Coming soon...</p>
-    </body></html>
-    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Lesson Plan Generator for K-5 Teachers | EduSpark">
+    <meta name="twitter:description" content="Create standards-aligned lesson plans instantly. Perfect for teachers who value time and learning outcomes.">
+    <link rel="canonical" href="https://gogopaschalgadget-web.github.io/eduspark/tools/lesson_plan.html">
+    <title>Free Lesson Plan Generator for K-5 Teachers | EduSpark</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6C63FF;
+            --pink: #EC4899;
+            --teal: #14B8A6;
+            --orange: #F59E0B;
+            --green: #22C55E;
+            --dark: #1F2937;
+            --light: #F9FAFB;
+            --gray: #E5E7EB;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #FFFFFF;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #FFFFFF;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+            nav {
+                padding: 0.8rem 1rem;
+            }
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 70px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumb {
+            background-color: var(--light);
+            padding: 1rem 0;
+            font-size: 0.9rem;
+            color: var(--dark);
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--pink) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-card i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Generator Section */
+        .generator-section {
+            margin-bottom: 3rem;
+        }
+
+        .generator-form {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        select, input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--gray);
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background-color: #FFFFFF;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        button {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--pink) 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(108, 99, 255, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* Generated Plan */
+        .generated-plan {
+            display: none;
+            background: white;
+            border: 2px solid var(--teal);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .generated-plan.show {
+            display: block;
+        }
+
+        .plan-header {
+            background: linear-gradient(135deg, var(--teal) 0%, var(--green) 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .plan-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .plan-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .plan-section {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .plan-section:last-child {
+            border-bottom: none;
+        }
+
+        .plan-section h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .plan-section p, .plan-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .plan-section ul {
+            margin-left: 1.5rem;
+        }
+
+        .print-btn {
+            background: var(--orange);
+            margin-top: 1rem;
+            display: inline-block;
+            width: auto;
+        }
+
+        .print-btn:hover {
+            background: #E89D3F;
+        }
+
+        /* Tips Section */
+        .tips-section {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+        }
+
+        .tips-section h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .tip-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-card p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+
+        .faq-section h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .faq-item {
+            background: var(--light);
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: var(--gray);
+        }
+
+        .faq-icon {
+            color: var(--primary);
+            font-size: 0.9rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            border-top: 1px solid var(--gray);
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--orange) 0%, var(--pink) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .cta-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .cta-btn {
+            background: white;
+            color: var(--orange);
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            nav, .breadcrumb, .hero, .generator-form, .tips-section, .faq-section, .cta-section, footer {
+                display: none;
+            }
+            body {
+                margin: 0;
+                padding: 1rem;
+            }
+            .generated-plan {
+                border: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/eduspark/" class="logo">
+                <i class="fas fa-spark"></i> EduSpark
+            </a>
+            <ul>
+                <li><a href="/eduspark/#grades">Grades</a></li>
+                <li><a href="/eduspark/#subjects">Subjects</a></li>
+                <li><a href="/eduspark/#games">Games</a></li>
+                <li><a href="/eduspark/#parents">For Parents</a></li>
+                <li><a href="/eduspark/#pricing">Pricing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/eduspark/">Home</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="/eduspark/tools/">Teacher Tools</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Lesson Plan Generator</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>AI-Powered Lesson Plan Generator</h1>
+                <p>Create comprehensive, standards-aligned lesson plans in minutes. Perfect for K-5 teachers who value time and learning outcomes.</p>
+                <div class="hero-features">
+                    <div class="feature-card">
+                        <i class="fas fa-flash"></i>
+                        <p>Generate in Seconds</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Standards Aligned</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <p>Print Ready</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-redo"></i>
+                        <p>Fully Customizable</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Generator Section -->
+        <section class="generator-section">
+            <div class="container">
+                <h2 style="color: var(--primary); margin-bottom: 2rem; font-size: 1.8rem;">Create Your Lesson Plan</h2>
+
+                <div class="generator-form">
+                    <form id="lessonForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="grade">Grade Level</label>
+                                <select id="grade" required>
+                                    <option value="">Select a grade level</option>
+                                    <option value="K">Kindergarten</option>
+                                    <option value="1">Grade 1</option>
+                                    <option value="2">Grade 2</option>
+                                    <option value="3">Grade 3</option>
+                                    <option value="4">Grade 4</option>
+                                    <option value="5">Grade 5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="Math">Math</option>
+                                    <option value="Reading">Reading</option>
+                                    <option value="Science">Science</option>
+                                    <option value="Spelling">Spelling</option>
+                                    <option value="History">History</option>
+                                    <option value="Geography">Geography</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="duration">Lesson Duration</label>
+                                <select id="duration" required>
+                                    <option value="">Select duration</option>
+                                    <option value="30">30 minutes</option>
+                                    <option value="45">45 minutes</option>
+                                    <option value="60">60 minutes</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="objective">Learning Objective</label>
+                                <input type="text" id="objective" placeholder="e.g., Students will identify equivalent fractions" required>
+                            </div>
+                        </div>
+
+                        <button type="submit">
+                            <i class="fas fa-magic"></i> Generate Lesson Plan
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Generated Plan Output -->
+                <div id="planOutput" class="generated-plan">
+                    <div class="plan-header">
+                        <h2 id="planTitle"></h2>
+                        <div class="plan-meta">
+                            <span><i class="fas fa-book"></i> <span id="planSubject"></span></span>
+                            <span><i class="fas fa-clock"></i> <span id="planDuration"></span></span>
+                            <span><i class="fas fa-graduation-cap"></i> <span id="planGrade"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="plan-section">
+                        <h3><i class="fas fa-bullseye"></i> Learning Objective</h3>
+                        <p id="planObjective"></p>
+                    </div>
+
+                    <div class="plan-section">
+                        <h3><i class="fas fa-tools"></i> Materials Needed</h3>
+                        <ul id="planMaterials"></ul>
+                    </div>
+
+                    <div class="plan-section">
+                        <h3><i class="fas fa-sun"></i> Warm-Up Activity (5-10 minutes)</h3>
+                        <p id="planWarmUp"></p>
+                    </div>
+
+                    <div class="plan-section">
+                        <h3><i class="fas fa-play-circle"></i> Main Activity</h3>
+                        <p id="planMainActivity"></p>
+                    </div>
+
+                    <div class="plan-section">
+                        <h3><i class="fas fa-chart-line"></i> Assessment</h3>
+                        <p id="planAssessment"></p>
+                    </div>
+
+                    <div class="plan-section">
+                        <h3><i class="fas fa-star"></i> Extension Activities</h3>
+                        <ul id="planExtension"></ul>
+                    </div>
+
+                    <button class="print-btn" onclick="window.print()">
+                        <i class="fas fa-print"></i> Print Lesson Plan
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="tips-section">
+            <div class="container">
+                <h2><i class="fas fa-lightbulb"></i> Tips for Effective Lesson Planning</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h3>Know Your Learners</h3>
+                        <p>Understand your students' learning styles, needs, and backgrounds. Differentiate instruction to ensure all students can access the material.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Align with Standards</h3>
+                        <p>Ensure your lessons align with state and national standards. This helps track progress and ensures consistent, quality education.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Engage and Interact</h3>
+                        <p>Include active learning strategies. Students learn best when they're engaged and participate in meaningful, hands-on activities.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Build in Flexibility</h3>
+                        <p>Plans should be flexible. If students need more time, adjust. If they catch on quickly, move forward. Responsiveness matters.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Assess Throughout</h3>
+                        <p>Use formative assessments to check understanding during lessons, not just summative assessments at the end. This guides instruction.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Reflect and Improve</h3>
+                        <p>After each lesson, reflect on what worked and what didn't. Use this feedback to improve your teaching and planning going forward.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I customize the generated lesson plans?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. The generated lesson plans are fully editable. You can modify objectives, activities, materials, and assessments to match your specific classroom needs and student abilities.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are these lesson plans aligned with educational standards?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Our lesson plans are designed to align with Common Core State Standards and other state-level educational standards for K-5 students, ensuring quality and consistency in instruction.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I use these lesson plans with different class sizes?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. The activities and strategies in our lesson plans work for different class sizes. You may need to adjust grouping strategies or materials, but the core approach is flexible.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer lesson plans for other grade levels or subjects?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, EduSpark focuses on K-5 with core subjects. Check back soon for expanded grade levels and subjects, including social studies and fine arts.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I save my generated lesson plans?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. You can print the lesson plan directly, or copy the content to your favorite document editor (Google Docs, Word, etc.) for further editing and storage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Explore More Teacher Tools</h2>
+                <p>EduSpark offers a complete suite of tools to help you teach better. From interactive games to assessment builders, we've got you covered.</p>
+                <a href="/eduspark/" class="cta-btn">Explore All Tools</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 EduSpark. Empowering K-5 Teachers.</p>
+            <div>
+                <a href="/eduspark/">Home</a>
+                <a href="/eduspark/#about">About</a>
+                <a href="/eduspark/#contact">Contact</a>
+                <a href="/eduspark/#privacy">Privacy Policy</a>
+                <a href="/eduspark/#terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "EduSpark Lesson Plan Generator",
+        "url": "https://gogopaschalgadget-web.github.io/eduspark/tools/lesson_plan.html",
+        "description": "Free AI-powered lesson plan generator for K-5 teachers. Create standards-aligned lesson plans in minutes for math, reading, science, and more.",
+        "applicationCategory": "EducationalApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6ZLDKMTPKP');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
+
+    <!-- Main Application Script -->
+    <script>
+        const lessonTemplates = {
+            'K-Math': {
+                materials: ['Number cards 1-10', 'Counting blocks', 'Worksheet (printed)', 'Whiteboard and markers'],
+                warmUp: 'Start with a counting song from 1 to 10. Ask students to clap along. Hold up number cards and have students identify each number.',
+                mainActivity: 'Place 5 counting blocks on the board. Count them aloud together. Have students count out the same number of blocks at their seats. Repeat with different quantities (3, 7, 9). Students color the correct number of objects on a worksheet.',
+                assessment: 'Show number cards and ask students to show the correct number of fingers or blocks. Listen for correct counting sequence.',
+                extension: ['Count to 20 together', 'Compare groups (which has more)', 'Find numbers around the classroom', 'Create a number book']
+            },
+            'K-Reading': {
+                materials: ['Picture book (suggested: Brown Bear, Brown Bear)', 'Letter cards A-Z', 'Whiteboard', 'Markers', 'Chart paper'],
+                warmUp: 'Display animal pictures. Ask students to identify and name each animal. Discuss what sounds animals make.',
+                mainActivity: 'Read the picture book aloud with emphasis on repetitive patterns. Point to words as you read. Have students predict what comes next. Repeat familiar lines together.',
+                assessment: 'Ask comprehension questions about the story. Have students act out their favorite animal from the book.',
+                extension: ['Create class big book with animal drawings', 'Sing animal songs', 'Play animal movement game', 'Letter identification with animal names']
+            },
+            '1-Math': {
+                materials: ['Base-10 blocks or place value manipulatives', 'Numbers 0-20 cards', 'Tens frames (printed)', 'Counters', 'Whiteboard'],
+                warmUp: 'Review counting to 20. Have students count by ones while you point to a number line.',
+                mainActivity: 'Introduce tens and ones using base-10 blocks. Show one ten block and some ones. Count together. Have students make different numbers using tens and ones. Draw pictures of tens and ones on the board.',
+                assessment: 'Ask students to show 14 with tens and ones blocks. Have them write the number and explain their thinking.',
+                extension: ['Build numbers beyond 20', 'Compare numbers using tens frames', 'Number stories with tens and ones', 'Mental math with tens']
+            },
+            '1-Reading': {
+                materials: ['Decodable reader (CVC focus)', 'Sound cards', 'Word wall', 'Whiteboard', 'Index cards with CVC words'],
+                warmUp: 'Review consonant and vowel sounds. Say a sound and have students repeat and find a letter.',
+                mainActivity: 'Introduce CVC (consonant-vowel-consonant) words. Model blending sounds: c-a-t makes cat. Read together with students. Have them decode simple CVC words. Students read from a decodable text.',
+                assessment: 'Students decode 5 CVC words independently. Listen for correct blending.',
+                extension: ['Read CVC word family books', 'Write CVC words', 'CVC word sorts', 'Sentence building with CVC words']
+            },
+            '2-Science': {
+                materials: ['Plant seeds', 'Soil', 'Water', 'Cups or small pots', 'Observation chart', 'Magnifying glass', 'Labels'],
+                warmUp: 'Show students a plant. Ask what it needs to grow. List responses on the board.',
+                mainActivity: 'Give each student or group a seed and soil. Plant seeds in cups. Water lightly together. Discuss what plants need: water, light, soil, warmth. Create a class observation chart to track growth.',
+                assessment: 'Students draw what they observe about their seed. Write one sentence about what the plant needs.',
+                extension: ['Measure plant growth weekly', 'Compare different seed types', 'Research plant life cycles', 'Create plant care journal']
+            },
+            '2-History': {
+                materials: ['Photos of students when younger', 'Timeline template', 'Chart paper', 'Markers', 'Old objects or pictures (optional)'],
+                warmUp: 'Show a baby photo of a famous person (without revealing identity). Ask students to guess who it is and how they know.',
+                mainActivity: 'Create a personal timeline on the board: Baby, Toddler, Preschool, Now. Add pictures of students at different ages. Have students create their own timeline with drawings or cutouts.',
+                assessment: 'Students share their timeline and explain one way they have changed.',
+                extension: ['Create family timelines', 'Classroom history timeline', 'Interview family members', 'Then and now comparisons']
+            },
+            '3-Math': {
+                materials: ['Multiplication models (arrays, equal groups)', 'Grid paper', 'Counters', 'Multiplication chart', 'Word problem cards'],
+                warmUp: 'Show 3 groups of 2 objects. Ask how many total. Write 3 groups of 2 equals 6.',
+                mainActivity: 'Introduce multiplication as equal groups and arrays. Model 2 x 3 using counters. Show the same with arrays on grid paper. Discuss the pattern. Students practice with different multiplication facts.',
+                assessment: 'Students solve 5 multiplication problems using manipulatives or drawings.',
+                extension: ['Solve word problems with multiplication', 'Explore commutative property', 'Multiplication facts fluency', 'Real-world applications']
+            },
+            '3-Reading': {
+                materials: ['Chapter book (appropriate for grade 3)', 'Comprehension questions', 'Reading log', 'Whiteboard', 'Graphic organizers'],
+                warmUp: 'Preview the chapter book cover. Ask students to predict what the story might be about.',
+                mainActivity: 'Read aloud one chapter. Stop to ask comprehension questions. Discuss predictions and whether they were right. Have students draw a picture of their favorite part.',
+                assessment: 'Students answer comprehension questions about the chapter.',
+                extension: ['Predict next chapter', 'Character analysis', 'Story mapping', 'Write alternative endings']
+            },
+            '4-Spelling': {
+                materials: ['Spelling word list', 'Whiteboard', 'Paper for writing', 'Dictionary', 'Example words for word families'],
+                warmUp: 'Say each spelling word aloud. Have students repeat and identify the word family or pattern.',
+                mainActivity: 'Write spelling words on the board. Break them into syllables. Look for patterns. Have students trace words, write them, use them in sentences. Practice word family groupings.',
+                assessment: 'Students spell each word correctly in context or from dictation.',
+                extension: ['Create word sorts by pattern', 'Use words in sentences', 'Design posters with words', 'Teach word meanings']
+            },
+            '4-Geography': {
+                materials: ['World map or globe', 'Compass', 'Atlas', 'Map template', 'Markers or colored pencils', 'Ruler'],
+                warmUp: 'Show a globe or world map. Ask students to point to their state or country.',
+                mainActivity: 'Teach cardinal directions (North, South, East, West). Use a compass to show directions. Have students orient a map. Create a simple map legend. Students create a map of their school or community.',
+                assessment: 'Students complete a map activity and label cardinal directions.',
+                extension: ['Map different regions', 'Study latitude and longitude', 'Compare maps over time', 'Create relief maps']
+            },
+            '5-Math': {
+                materials: ['Fraction models (circles, bars, sets)', 'Grid paper', 'Number line', 'Manipulatives', 'Dry-erase boards'],
+                warmUp: 'Show a pizza cut into 4 slices. Ask students to identify what fraction is shown.',
+                mainActivity: 'Introduce fractions as parts of a whole. Use visual models to show 1/2, 1/3, 1/4. Identify equivalent fractions. Compare fractions using models and number lines. Students practice with various fraction problems.',
+                assessment: 'Students name fractions, compare fractions, and find equivalent fractions using models.',
+                extension: ['Add and subtract fractions', 'Multiply fractions', 'Decimal connections', 'Real-world fraction problems']
+            },
+            '5-Science': {
+                materials: ['Simple circuit kit or battery, bulb, wire', 'Copper wire', 'Light bulb', 'Switch materials', 'Safety goggles', 'Worksheet'],
+                warmUp: 'Ask students where they see electricity used in the classroom. List their responses.',
+                mainActivity: 'Build a simple circuit as a class. Show how to connect battery, wire, and light bulb. Have students build their own circuit. Experiment with adding more bulbs or batteries.',
+                assessment: 'Students draw a circuit diagram and label the parts.',
+                extension: ['Compare series and parallel circuits', 'Troubleshoot broken circuits', 'Design a circuit', 'Research electrical safety']
+            }
+        };
+
+        const gradeNames = {
+            'K': 'Kindergarten',
+            '1': 'Grade 1',
+            '2': 'Grade 2',
+            '3': 'Grade 3',
+            '4': 'Grade 4',
+            '5': 'Grade 5'
+        };
+
+        document.getElementById('lessonForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const grade = document.getElementById('grade').value;
+            const subject = document.getElementById('subject').value;
+            const duration = document.getElementById('duration').value;
+            const objective = document.getElementById('objective').value;
+
+            const templateKey = grade + '-' + subject;
+            const template = lessonTemplates[templateKey];
+
+            if (!template) {
+                alert('Lesson template not available for this combination. Please try another selection.');
+                return;
+            }
+
+            const planOutput = document.getElementById('planOutput');
+            document.getElementById('planTitle').textContent = subject + ' Lesson for ' + gradeNames[grade];
+            document.getElementById('planGrade').textContent = gradeNames[grade];
+            document.getElementById('planSubject').textContent = subject;
+            document.getElementById('planDuration').textContent = duration + ' minutes';
+            document.getElementById('planObjective').textContent = objective;
+
+            // Materials
+            const materialsList = document.getElementById('planMaterials');
+            materialsList.innerHTML = '';
+            template.materials.forEach(material => {
+                const li = document.createElement('li');
+                li.textContent = material;
+                materialsList.appendChild(li);
+            });
+
+            // Content
+            document.getElementById('planWarmUp').textContent = template.warmUp;
+            document.getElementById('planMainActivity').textContent = template.mainActivity;
+            document.getElementById('planAssessment').textContent = template.assessment;
+
+            // Extension
+            const extensionList = document.getElementById('planExtension');
+            extensionList.innerHTML = '';
+            template.extension.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                extensionList.appendChild(li);
+            });
+
+            planOutput.classList.add('show');
+            planOutput.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.closest('.faq-item');
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
