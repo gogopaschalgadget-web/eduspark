@@ -1,22 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free rubric creator for K-5 teachers. Build customizable grading rubrics for writing, projects, presentations, and more in minutes.">
+    <meta name="keywords" content="rubric creator, teacher tools, grading rubric, assessment tools, K-5 education">
+    <title>Free Rubric Creator for Teachers | EduSpark</title>
+    <link rel="canonical" href="https://gogopaschalgadget-web.github.io/eduspark/tools/rubric.html">
 
-    <html><head>
-<!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6ZLDKMTPKP');
-</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
-<title>Rubrics</title>    <link rel="canonical" href="https://gogopaschalgadget-web.github.io/eduspark/tools/rubric.html">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Rubrics">
-    <meta property="og:description" content="">
+    <!-- OG Tags -->
+    <meta property="og:title" content="Free Rubric Creator for Teachers | EduSpark">
+    <meta property="og:description" content="Free rubric creator for K-5 teachers. Build customizable grading rubrics for writing, projects, presentations, and more in minutes.">
     <meta property="og:url" content="https://gogopaschalgadget-web.github.io/eduspark/tools/rubric.html">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="EduSpark">
-</head><body>
-    <h1>Create Rubrics</h1>
-    <p>Coming soon...</p>
-    </body></html>
-    
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Rubric Creator for Teachers | EduSpark">
+    <meta name="twitter:description" content="Free rubric creator for K-5 teachers. Build customizable grading rubrics for writing, projects, presentations, and more in minutes.">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "EduSpark Rubric Creator",
+        "description": "Free rubric creator for K-5 teachers. Build customizable grading rubrics for writing, projects, presentations, and more in minutes.",
+        "url": "https://gogopaschalgadget-web.github.io/eduspark/tools/rubric.html",
+        "applicationCategory": "EducationApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6ZLDKMTPKP');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --pink: #EC4899;
+            --teal: #14B8A6;
+            --orange: #F59E0B;
+            --green: #22C55E;
+            --dark: #1F2937;
+            --light-gray: #F3F4F6;
+            --border-color: #E5E7EB;
+            --text-muted: #6B7280;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--dark);
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .navbar-logo {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding: 0 2rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--pink) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Form Section */
+        .form-section {
+            background-color: var(--light-gray);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+        }
+
+        .form-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-size: 0.95rem;
+        }
+
+        .form-group select,
+        .form-group input {
+            padding: 0.75rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #5a52d5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--teal);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #0f9488;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Rubric Preview */
+        .rubric-section {
+            display: none;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .rubric-section.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .rubric-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .rubric-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .rubric-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        .rubric-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .rubric-table tbody tr:hover {
+            background-color: var(--light-gray);
+        }
+
+        .rubric-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .criterion-name {
+            font-weight: 700;
+            color: var(--primary);
+            min-width: 120px;
+        }
+
+        .level-cell {
+            text-align: center;
+            font-size: 0.9rem;
+            padding: 1rem;
+        }
+
+        /* Best Practices Section */
+        .practices-section {
+            background-color: var(--light-gray);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+
+        .practices-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+
+        .practices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .practice-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .practice-card i {
+            font-size: 2rem;
+            color: var(--pink);
+            margin-bottom: 1rem;
+        }
+
+        .practice-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .practice-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 3rem 0;
+        }
+
+        .faq-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--dark);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 2px solid var(--border-color);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background-color: #e0e7ff;
+        }
+
+        .faq-icon {
+            color: var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: white;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--teal) 0%, var(--green) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-section a {
+            display: inline-block;
+            background-color: white;
+            color: var(--teal);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .cta-section a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: #9CA3AF;
+        }
+
+        /* Utilities */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-2 {
+            margin-bottom: 1rem;
+        }
+
+        .success-message {
+            background-color: #ECFDF5;
+            border-left: 4px solid var(--green);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            color: #065F46;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="navbar-container">
+            <a href="/eduspark/" class="navbar-logo"><i class="fas fa-graduation-cap"></i> EduSpark</a>
+            <ul class="nav-links">
+                <li><a href="/eduspark/">Home</a></li>
+                <li><a href="/eduspark/#grades">Grades</a></li>
+                <li><a href="/eduspark/#subjects">Subjects</a></li>
+                <li><a href="/eduspark/#games">Games</a></li>
+                <li><a href="/eduspark/#parents">For Parents</a></li>
+                <li><a href="/eduspark/#pricing">Pricing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="/eduspark/">Home</a> > <a href="/eduspark/tools/">Teacher Tools</a> > Rubric Creator
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1><i class="fas fa-star"></i> Free Rubric Creator</h1>
+            <p>Build customizable grading rubrics in minutes. Perfect for writing assignments, presentations, projects, and more.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Form Section -->
+        <section class="form-section">
+            <h2>Create Your Rubric</h2>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="assessmentType">Assessment Type</label>
+                    <select id="assessmentType">
+                        <option value="Writing">Writing Assignment</option>
+                        <option value="Presentation">Presentation</option>
+                        <option value="Project">Project</option>
+                        <option value="Lab Report">Lab Report</option>
+                        <option value="Art">Art & Creativity</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="numCriteria">Number of Criteria</label>
+                    <select id="numCriteria">
+                        <option value="3">3 Criteria</option>
+                        <option value="4">4 Criteria</option>
+                        <option value="5">5 Criteria</option>
+                        <option value="6">6 Criteria</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="numLevels">Performance Levels</label>
+                    <select id="numLevels">
+                        <option value="3">3 Levels</option>
+                        <option value="4">4 Levels</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" id="generateBtn" onclick="generateRubric()">
+                    <i class="fas fa-wand-magic-sparkles"></i> Generate Rubric
+                </button>
+                <button class="btn btn-secondary" id="printBtn" onclick="printRubric()" style="display: none;">
+                    <i class="fas fa-print"></i> Print Rubric
+                </button>
+                <button class="btn btn-outline" id="copyBtn" onclick="copyToClipboard()" style="display: none;">
+                    <i class="fas fa-copy"></i> Copy to Clipboard
+                </button>
+            </div>
+
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i> Rubric copied to clipboard successfully!
+            </div>
+        </section>
+
+        <!-- Rubric Preview Section -->
+        <section class="rubric-section" id="rubricSection">
+            <h2><i class="fas fa-table"></i> Your Rubric</h2>
+            <div id="rubricContainer"></div>
+        </section>
+
+        <!-- Best Practices Section -->
+        <section class="practices-section">
+            <h2>Rubric Best Practices</h2>
+            <div class="practices-grid">
+                <div class="practice-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Be Specific</h3>
+                    <p>Use clear, observable criteria. Instead of "good writing," use "correct grammar and spelling throughout."</p>
+                </div>
+
+                <div class="practice-card">
+                    <i class="fas fa-level-up-alt"></i>
+                    <h3>Define Levels Clearly</h3>
+                    <p>Make it easy for students to understand what separates each performance level. Use distinct descriptors.</p>
+                </div>
+
+                <div class="practice-card">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Share in Advance</h3>
+                    <p>Give rubrics to students before they start the assignment. This helps them understand your expectations.</p>
+                </div>
+
+                <div class="practice-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Use for Feedback</h3>
+                    <p>Reference the rubric when providing feedback. Help students see how they performed on each criterion.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How many criteria should I include in my rubric?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>It depends on the assignment complexity. For shorter assignments, 3-4 criteria work well. For larger projects, 5-6 criteria allow for more detailed feedback. Start with fewer criteria and add more as needed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What's the difference between 3-level and 4-level rubrics?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A 3-level rubric typically uses Developing, Proficient, and Advanced. A 4-level rubric adds Beginning, making it easier to identify students who need extra support. Choose 4-level for formative assessment or when you want more granular feedback.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can I modify the rubric after generating it?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. You can customize all criteria names and descriptions by editing directly in the table. After making changes, use the Print or Copy button to save your final rubric.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Should I use weighted scores for different criteria?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, weighting can help. For example, content might be worth 50%, organization 30%, and mechanics 20%. Clearly communicate weights to students so they know what matters most for the assignment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How often should I use rubrics in my classroom?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Use rubrics for major assignments and projects. They help standardize grading and provide consistent feedback. Even a simple rubric for smaller assignments can improve student understanding of expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Explore More EduSpark Tools</h2>
+            <p>Discover grade books, lesson planners, and more resources for K-5 teachers.</p>
+            <a href="/eduspark/tools/"><i class="fas fa-arrow-right"></i> View All Tools</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/eduspark/">Home</a>
+                <a href="/eduspark/tools/">Tools</a>
+                <a href="/eduspark/#contact">Contact</a>
+                <a href="/eduspark/#privacy">Privacy</a>
+                <a href="/eduspark/#terms">Terms</a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 EduSpark. All rights reserved. Free resources for K-5 teachers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Rubric templates based on assessment type
+        const rubricTemplates = {
+            'Writing': {
+                criteria: ['Content & Ideas', 'Organization', 'Voice & Style', 'Grammar & Mechanics'],
+                level3: {
+                    'Content & Ideas': ['Needs Development: Limited ideas and few supporting details.', 'Proficient: Clear ideas with adequate supporting details.', 'Advanced: Rich ideas with well-developed supporting details.'],
+                    'Organization': ['Needs Development: Ideas are not clearly organized.', 'Proficient: Ideas are organized with a clear beginning, middle, and end.', 'Advanced: Well-organized with smooth transitions between ideas.'],
+                    'Voice & Style': ['Needs Development: Minimal voice or personality.', 'Proficient: Clear voice that engages the reader.', 'Advanced: Distinctive voice that maintains reader engagement throughout.'],
+                    'Grammar & Mechanics': ['Needs Development: Frequent errors in grammar, spelling, and punctuation.', 'Proficient: Few errors in grammar, spelling, and punctuation.', 'Advanced: Virtually error-free grammar, spelling, and punctuation.']
+                },
+                level4: {
+                    'Content & Ideas': ['Beginning: Little to no development of ideas.', 'Developing: Some ideas with minimal supporting details.', 'Proficient: Clear ideas with adequate supporting details.', 'Advanced: Rich, original ideas with extensive, well-developed supporting details.'],
+                    'Organization': ['Beginning: No discernible organization.', 'Developing: Weak organization with some confusion.', 'Proficient: Clear organization with beginning, middle, and end.', 'Advanced: Sophisticated organization with smooth transitions and logical flow.'],
+                    'Voice & Style': ['Beginning: No voice or personality evident.', 'Developing: Minimal voice, may be inconsistent.', 'Proficient: Clear, consistent voice that engages readers.', 'Advanced: Distinctive, compelling voice that captivates throughout.'],
+                    'Grammar & Mechanics': ['Beginning: Many errors that impede understanding.', 'Developing: Several errors that sometimes distract.', 'Proficient: Few errors that do not interfere with meaning.', 'Advanced: Virtually error-free with skillful command of language.']
+                }
+            },
+            'Presentation': {
+                criteria: ['Content Knowledge', 'Visual Aids', 'Delivery & Confidence', 'Audience Engagement'],
+                level3: {
+                    'Content Knowledge': ['Needs Development: Incomplete understanding of topic.', 'Proficient: Solid understanding of main ideas.', 'Advanced: Comprehensive, detailed knowledge of topic.'],
+                    'Visual Aids': ['Needs Development: Visual aids unclear or missing.', 'Proficient: Visual aids enhance understanding.', 'Advanced: Polished visual aids effectively support content.'],
+                    'Delivery & Confidence': ['Needs Development: Lacks confidence, difficult to understand.', 'Proficient: Clear delivery with reasonable confidence.', 'Advanced: Polished delivery demonstrating strong confidence.'],
+                    'Audience Engagement': ['Needs Development: Minimal attempt to engage audience.', 'Proficient: Maintains audience interest with good eye contact.', 'Advanced: Captivates audience with excellent interaction skills.']
+                },
+                level4: {
+                    'Content Knowledge': ['Beginning: Minimal understanding demonstrated.', 'Developing: Partial understanding with some gaps.', 'Proficient: Strong understanding of main ideas.', 'Advanced: Exceptional, in-depth knowledge with clear articulation.'],
+                    'Visual Aids': ['Beginning: No visual aids or confusing ones.', 'Developing: Visual aids present but somewhat unclear.', 'Proficient: Clear visual aids that support main points.', 'Advanced: Exceptional visual aids that enhance credibility.'],
+                    'Delivery & Confidence': ['Beginning: Difficult to follow, lacks confidence.', 'Developing: Somewhat unclear delivery, inconsistent confidence.', 'Proficient: Clear delivery with confident presentation.', 'Advanced: Exceptional delivery demonstrating mastery and poise.'],
+                    'Audience Engagement': ['Beginning: No attempt to engage audience.', 'Developing: Minimal engagement, limited interaction.', 'Proficient: Good engagement with reasonable interaction.', 'Advanced: Exceptional engagement, maintains audience throughout.']
+                }
+            },
+            'Project': {
+                criteria: ['Concept & Planning', 'Execution & Technique', 'Creativity & Innovation', 'Completion & Presentation'],
+                level3: {
+                    'Concept & Planning': ['Needs Development: Unclear concept, minimal planning evident.', 'Proficient: Clear concept with adequate planning.', 'Advanced: Well-developed concept with thorough planning.'],
+                    'Execution & Technique': ['Needs Development: Poor execution with inconsistent technique.', 'Proficient: Competent execution with consistent technique.', 'Advanced: Skillful execution demonstrating strong technical ability.'],
+                    'Creativity & Innovation': ['Needs Development: Limited creativity or originality.', 'Proficient: Demonstrates creativity and original thinking.', 'Advanced: Exceptional creativity with innovative approach.'],
+                    'Completion & Presentation': ['Needs Development: Incomplete or poorly presented.', 'Proficient: Complete and adequately presented.', 'Advanced: Fully complete with polished presentation.']
+                },
+                level4: {
+                    'Concept & Planning': ['Beginning: Vague or underdeveloped concept.', 'Developing: Basic concept with some planning.', 'Proficient: Clear concept with good planning.', 'Advanced: Sophisticated concept with meticulous planning.'],
+                    'Execution & Technique': ['Beginning: Inconsistent or weak execution.', 'Developing: Adequate execution with some technical issues.', 'Proficient: Competent execution with good technique.', 'Advanced: Expert execution demonstrating mastery of technique.'],
+                    'Creativity & Innovation': ['Beginning: Little to no originality.', 'Developing: Some creative thinking present.', 'Proficient: Good creativity with original ideas.', 'Advanced: Exceptional innovation with unique approach.'],
+                    'Completion & Presentation': ['Beginning: Significantly incomplete.', 'Developing: Mostly complete but presentation needs work.', 'Proficient: Complete with good presentation.', 'Advanced: Fully complete with exceptional presentation.']
+                }
+            },
+            'Lab Report': {
+                criteria: ['Hypothesis & Procedure', 'Data Collection & Analysis', 'Conclusions & Evidence', 'Scientific Writing'],
+                level3: {
+                    'Hypothesis & Procedure': ['Needs Development: Unclear hypothesis or incomplete procedure.', 'Proficient: Clear hypothesis with detailed, followable procedure.', 'Advanced: Well-formulated hypothesis with precisely documented procedure.'],
+                    'Data Collection & Analysis': ['Needs Development: Incomplete data or flawed analysis.', 'Proficient: Complete data with accurate analysis.', 'Advanced: Thorough data collection with sophisticated analysis.'],
+                    'Conclusions & Evidence': ['Needs Development: Conclusions not supported by data.', 'Proficient: Conclusions supported by evidence.', 'Advanced: Well-reasoned conclusions with comprehensive evidence.'],
+                    'Scientific Writing': ['Needs Development: Writing lacks clarity and proper format.', 'Proficient: Clear writing with appropriate scientific language.', 'Advanced: Excellent writing with sophisticated scientific vocabulary.']
+                },
+                level4: {
+                    'Hypothesis & Procedure': ['Beginning: Hypothesis missing or unclear.', 'Developing: Hypothesis present with incomplete procedure.', 'Proficient: Clear hypothesis with detailed procedure.', 'Advanced: Well-constructed hypothesis with precise procedural documentation.'],
+                    'Data Collection & Analysis': ['Beginning: Minimal data collected, incomplete analysis.', 'Developing: Partial data with basic analysis.', 'Proficient: Complete data with accurate analysis.', 'Advanced: Comprehensive data with thorough, insightful analysis.'],
+                    'Conclusions & Evidence': ['Beginning: Weak or unsupported conclusions.', 'Developing: Conclusions with partial evidence support.', 'Proficient: Solid conclusions supported by evidence.', 'Advanced: Exceptional conclusions with compelling evidence and implications.'],
+                    'Scientific Writing': ['Beginning: Lacks scientific format and clarity.', 'Developing: Some scientific language with formatting issues.', 'Proficient: Clear scientific writing with proper format.', 'Advanced: Excellent scientific writing demonstrating command of language.']
+                }
+            },
+            'Art': {
+                criteria: ['Technique & Skill', 'Creativity & Originality', 'Use of Elements', 'Effort & Craftsmanship'],
+                level3: {
+                    'Technique & Skill': ['Needs Development: Limited technical skill evident.', 'Proficient: Demonstrates solid technical ability.', 'Advanced: Exceptional technical skill and control.'],
+                    'Creativity & Originality': ['Needs Development: Work lacks originality.', 'Proficient: Shows creative thinking and originality.', 'Advanced: Highly creative with unique artistic vision.'],
+                    'Use of Elements': ['Needs Development: Poor use of color, line, and composition.', 'Proficient: Good use of elements to create visual interest.', 'Advanced: Excellent use of elements with sophisticated composition.'],
+                    'Effort & Craftsmanship': ['Needs Development: Appears rushed or incomplete.', 'Proficient: Shows care and attention to detail.', 'Advanced: Meticulous attention to detail and polish.']
+                },
+                level4: {
+                    'Technique & Skill': ['Beginning: Weak technical skill and control.', 'Developing: Basic technical skill with some inconsistency.', 'Proficient: Solid technical ability and control.', 'Advanced: Masterful technique with exceptional control and skill.'],
+                    'Creativity & Originality': ['Beginning: Little originality or creativity.', 'Developing: Some creative effort with limited originality.', 'Proficient: Creative work with original ideas.', 'Advanced: Exceptional creativity with distinctive artistic voice.'],
+                    'Use of Elements': ['Beginning: Ineffective use of artistic elements.', 'Developing: Basic use of elements with some success.', 'Proficient: Good use of elements and composition.', 'Advanced: Sophisticated use of elements creating visual harmony.'],
+                    'Effort & Craftsmanship': ['Beginning: Minimal effort evident.', 'Developing: Some care shown but inconsistent.', 'Proficient: Good attention to detail and quality.', 'Advanced: Exceptional craftsmanship and meticulous execution.']
+                }
+            }
+        };
+
+        function generateRubric() {
+            const assessmentType = document.getElementById('assessmentType').value;
+            const numCriteria = parseInt(document.getElementById('numCriteria').value);
+            const numLevels = parseInt(document.getElementById('numLevels').value);
+
+            const template = rubricTemplates[assessmentType];
+            const criteria = template.criteria.slice(0, numCriteria);
+            const levelKey = `level${numLevels}`;
+            const descriptions = template[levelKey];
+
+            let tableHTML = `<table class="rubric-table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Criterion</th>`;
+
+            const levelNames = numLevels === 3
+                ? ['Needs Development', 'Proficient', 'Advanced']
+                : ['Beginning', 'Developing', 'Proficient', 'Advanced'];
+
+            levelNames.forEach(level => {
+                tableHTML += `<th style="width: ${80 / numLevels}%; text-align: center;">${level}</th>`;
+            });
+
+            tableHTML += `</tr></thead><tbody>`;
+
+            criteria.forEach(criterion => {
+                tableHTML += `<tr>
+                    <td class="criterion-name" contenteditable="true">${criterion}</td>`;
+
+                descriptions[criterion].forEach(desc => {
+                    tableHTML += `<td class="level-cell" contenteditable="true">${desc}</td>`;
+                });
+
+                tableHTML += `</tr>`;
+            });
+
+            tableHTML += `</tbody></table>`;
+
+            document.getElementById('rubricContainer').innerHTML = tableHTML;
+            document.getElementById('rubricSection').classList.add('show');
+            document.getElementById('printBtn').style.display = 'inline-flex';
+            document.getElementById('copyBtn').style.display = 'inline-flex';
+
+            // Scroll to rubric
+            document.getElementById('rubricSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function printRubric() {
+            const rubricHTML = document.getElementById('rubricContainer').innerHTML;
+            const printWindow = window.open('', '', 'width=1000,height=600');
+            const assessmentType = document.getElementById('assessmentType').value;
+
+            printWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>${assessmentType} Rubric</title>
+                    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+                    <style>
+                        body { font-family: 'Nunito', sans-serif; padding: 2rem; }
+                        h1 { color: #6C63FF; margin-bottom: 1rem; }
+                        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+                        th { background-color: #6C63FF; color: white; padding: 0.75rem; text-align: left; }
+                        td { border: 1px solid #E5E7EB; padding: 0.75rem; }
+                        tbody tr:nth-child(odd) { background-color: #F3F4F6; }
+                    </style>
+                </head>
+                <body>
+                    <h1>${assessmentType} Assessment Rubric</h1>
+                    ${rubricHTML}
+                    <script>
+                        window.print();
+                        window.close();
+                    </script>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+        }
+
+        function copyToClipboard() {
+            const table = document.querySelector('.rubric-table');
+            const range = document.createRange();
+            range.selectNodeContents(table);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+
+            const successMsg = document.getElementById('successMessage');
+            successMsg.classList.add('show');
+            setTimeout(() => {
+                successMsg.classList.remove('show');
+            }, 3000);
+        }
+
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
