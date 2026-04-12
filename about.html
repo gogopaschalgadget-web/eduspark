@@ -1,67 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZLDKMTPKP"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6ZLDKMTPKP');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5182415121977508" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About EduSpark</title>
-    <meta name="description" content="Learn about EduSpark, part of the GoGoPaschal resource network.">
+    <title>About EduSpark - Free K-8 Educational Games and Learning Resources</title>
+    <meta name="description" content="Learn about EduSpark, a free educational resource for K-8 students. We publish curriculum-aligned games, worksheets, and guides to make learning fun.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://gogopaschalgadget-web.github.io/eduspark/about.html">
-    <meta property="og:title" content="About EduSpark">
+    <meta property="og:title" content="About EduSpark - Free K-8 Learning Resources">
+    <meta property="og:description" content="EduSpark publishes free educational games, worksheets, and guides for K-8 students. Curriculum-aligned and teacher-approved.">
     <meta property="og:url" content="https://gogopaschalgadget-web.github.io/eduspark/about.html">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About EduSpark">
+    <meta name="twitter:description" content="Free educational games and worksheets for K-8 students.">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebPage","name":"About EduSpark","url":"https://gogopaschalgadget-web.github.io/eduspark/about.html"}
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About EduSpark",
+      "url": "https://gogopaschalgadget-web.github.io/eduspark/about.html",
+      "description": "EduSpark publishes free educational games and resources for K-8 students.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "EduSpark",
+        "url": "https://gogopaschalgadget-web.github.io/eduspark/"
+      }
+    }
     </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; background: #fafafa; }
-        header { background: linear-gradient(135deg, #2d8659 0%, #ffc107 100%); color: white; padding: 48px 24px; text-align: center; }
-        header h1 { font-size: 42px; margin-bottom: 8px; }
-        main { max-width: 800px; margin: 40px auto; padding: 24px; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        h2 { color: #2d8659; font-size: 24px; margin: 24px 0 12px 0; border-bottom: 3px solid #ffc107; padding-bottom: 8px; }
-        p { margin-bottom: 16px; }
-        a { color: #ffc107; text-decoration: none; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.7; color: #333; background: #fafafa; }
+        header { background: linear-gradient(135deg, #2d8659 0%, #ffc107 100%); color: white; padding: 56px 24px; text-align: center; }
+        header h1 { font-size: 42px; margin-bottom: 10px; }
+        header p { font-size: 18px; opacity: 0.9; }
+        nav { background: #2d8659; padding: 12px 24px; text-align: center; }
+        nav a { color: #ffc107; text-decoration: none; margin: 0 16px; font-weight: 600; }
+        nav a:hover { text-decoration: underline; }
+        main { max-width: 860px; margin: 40px auto; padding: 0 24px 40px; }
+        .card { background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 32px; margin-bottom: 24px; }
+        h2 { color: #2d8659; font-size: 26px; margin-bottom: 14px; border-bottom: 3px solid #ffc107; padding-bottom: 8px; }
+        h3 { color: #1a5c3b; font-size: 18px; margin-bottom: 10px; }
+        p { margin-bottom: 14px; }
+        a { color: #2d8659; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .eeat-section { background: #f9f9f9; padding: 16px; border-left: 4px solid #ffc107; margin: 20px 0; border-radius: 4px; }
-        .network { background: #f5f5f5; padding: 16px; border-radius: 8px; margin: 24px 0; }
-        .network ul { list-style: none; padding: 0; margin: 0; }
-        .network li { margin-bottom: 8px; }
-        footer { text-align: center; padding: 20px; color: #666; font-size: 14px; }
-        @media (max-width: 768px) { header h1 { font-size: 32px; } }
+        .eeat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+        .eeat-item { background: #f0faf5; padding: 16px; border-radius: 8px; border-left: 4px solid #2d8659; }
+        .eeat-item h3 { color: #2d8659; font-size: 16px; margin-bottom: 6px; }
+        .subject-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+        .subject-chip { background: #ffc107; color: #1a1a1a; padding: 10px 14px; border-radius: 8px; text-align: center; font-weight: 600; font-size: 14px; }
+        .network-list { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+        .network-item { display: flex; align-items: center; gap: 12px; background: #f5f5f5; padding: 12px 16px; border-radius: 8px; }
+        .network-item span { font-weight: 600; color: #2d8659; }
+        .faq-item { border-bottom: 1px solid #eee; padding: 16px 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item h3 { color: #2d8659; font-size: 17px; margin-bottom: 8px; }
+        .cta-box { background: linear-gradient(135deg, #2d8659, #ffc107); color: white; padding: 32px; border-radius: 10px; text-align: center; margin-top: 24px; }
+        .cta-box h2 { color: white; border-bottom: none; }
+        .cta-btn { display: inline-block; background: white; color: #2d8659; padding: 14px 32px; border-radius: 8px; font-weight: 700; font-size: 16px; margin-top: 16px; text-decoration: none; }
+        footer { text-align: center; padding: 24px; color: #666; font-size: 14px; background: #f5f5f5; }
+        @media (max-width: 768px) {
+            header h1 { font-size: 30px; }
+            .eeat-grid { grid-template-columns: 1fr; }
+            .subject-grid { grid-template-columns: repeat(2, 1fr); }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>EduSpark</h1>
-        <p>Educational games and learning tools for K-8 students</p>
+        <p>Free educational games and resources for K-8 students</p>
     </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
     <main>
-        <h2>Our Mission</h2>
-        <p>Interactive educational games designed to make K-8 learning fun and engaging</p>
-        <div class="eeat-section">
-            <h3 style="color: #2d8659; margin-bottom: 10px;">Why Trust Us</h3>
-            <p><strong>Experience:</strong> Built by professionals with expertise in educational games.</p>
-            <p><strong>Expertise:</strong> Our content is carefully researched and verified for accuracy.</p>
-            <p><strong>Authority:</strong> Part of the GoGoPaschal network of trusted resource platforms.</p>
-            <p><strong>Trustworthiness:</strong> Transparent about our methods, sources, and partnerships.</p>
+        <div class="card">
+            <h2>Our Mission</h2>
+            <p>EduSpark exists to make K-8 learning genuinely fun. We publish free, curriculum-aligned games, worksheets, and study guides designed to help students in kindergarten through 8th grade build strong foundations in math, reading, science, and writing.</p>
+            <p>Every resource on EduSpark is built around one question: will a real student find this useful? We do not publish filler content. We focus on what works: clear explanations, engaging formats, and grade-level accuracy.</p>
+            <p>Parents trust EduSpark because our resources align with Common Core and state standards. Teachers share EduSpark pages because the content actually reinforces classroom lessons. Students return because learning here does not feel like work.</p>
         </div>
-        <h2>About GoGoPaschal</h2>
-        <p>GoGoPaschal publishes a network of specialized resource sites designed to help professionals, educators, and learners succeed.</p>
-        <div class="network">
-            <p style="font-weight: 600; margin-bottom: 12px;">Part of the GoGoPaschal Network:</p>
-            <ul>
-                <li><a href="https://gogopaschalgadget-web.github.io/tradespro-guide">- TradesPro Guide</a></li>
-                <li><a href="https://gogopaschalgadget-web.github.io/eduspark">- EduSpark</a></li>
-                <li><a href="https://gogopaschalgadget-web.github.io/claimcheck">- ClaimCheck</a></li>
-                <li><a href="https://gogopaschalgadget-web.github.io/root-hub">- Root Hub</a></li>
-                <li><a href="https://gogopaschalgadget-web.github.io/dreamforge-ai">- DreamForge AI</a></li>
-            </ul>
+
+        <div class="card">
+            <h2>What We Cover</h2>
+            <p>Our library spans every core subject for students in grades K-8:</p>
+            <div class="subject-grid">
+                <div class="subject-chip">Math (K-8)</div>
+                <div class="subject-chip">Reading</div>
+                <div class="subject-chip">Writing</div>
+                <div class="subject-chip">Science</div>
+                <div class="subject-chip">Spelling</div>
+                <div class="subject-chip">Vocabulary</div>
+                <div class="subject-chip">Homeschool</div>
+                <div class="subject-chip">Printables</div>
+                <div class="subject-chip">Study Guides</div>
+            </div>
+            <p style="margin-top:16px;">We add new content weekly. Our most popular resources include free printable worksheets for 3rd grade math, spelling word lists for 2nd grade, and science project ideas for 5th grade.</p>
         </div>
-        <p style="text-align: center; margin-top: 24px;"><a href="/contact.html">Get in touch</a></p>
+
+        <div class="card">
+            <h2>Why Trust EduSpark</h2>
+            <div class="eeat-grid">
+                <div class="eeat-item">
+                    <h3>Experience</h3>
+                    <p>Our team has spent years building educational resources for K-8 classrooms. We understand what students struggle with and what actually helps them learn.</p>
+                </div>
+                <div class="eeat-item">
+                    <h3>Expertise</h3>
+                    <p>Every guide and worksheet is reviewed for grade-level accuracy. We cross-reference state standards and Common Core benchmarks before publishing.</p>
+                </div>
+                <div class="eeat-item">
+                    <h3>Authority</h3>
+                    <p>Part of the GoGoPaschal network of trusted resource platforms. Our sites collectively serve thousands of readers each month.</p>
+                </div>
+                <div class="eeat-item">
+                    <h3>Trustworthiness</h3>
+                    <p>No paywalls. No account required. All core resources are free. We are transparent about our methods, sources, and how we make money (display ads).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>Is EduSpark free to use?</h3>
+                <p>Yes. All core resources on EduSpark are completely free. You do not need an account to access worksheets, guides, or game recommendations. We keep the site running through display advertising.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Are the resources aligned with state standards?</h3>
+                <p>Yes. We align content to Common Core State Standards (CCSS) and cross-reference grade-level benchmarks for math and English Language Arts. Science content references Next Generation Science Standards (NGSS) where applicable.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can teachers use EduSpark resources in class?</h3>
+                <p>Absolutely. Teachers are welcome to print and share EduSpark worksheets and guides for classroom use at no cost. We ask only that you do not republish or resell our content as your own.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How often is new content added?</h3>
+                <p>We publish new guides, worksheets, and resource lists every week. Check our <a href="/blog/">blog</a> for the latest additions.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Part of the GoGoPaschal Network</h2>
+            <p>EduSpark is one of several specialized resource sites published by the GoGoPaschal team. Each site focuses on a distinct audience with the same commitment to high-quality, useful content.</p>
+            <div class="network-list">
+                <div class="network-item"><span>TradesPro Guide</span> - Expert resources for plumbers, electricians, HVAC techs, and contractors</div>
+                <div class="network-item"><span>ClaimCheck</span> - Class action settlement finder and insurance claim guides</div>
+                <div class="network-item"><span>Root Hub</span> - Small business guides, startup tips, and entrepreneurship resources</div>
+                <div class="network-item"><span>DreamForge AI</span> - Free AI image generation tools and prompt guides</div>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h2>Start Learning Today</h2>
+            <p>Browse our free worksheets, games, and guides for K-8 students.</p>
+            <a href="/" class="cta-btn">Explore EduSpark Resources</a>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2026 GoGoPaschal. All rights reserved. <a href="/privacy.html">Privacy Policy</a> | <a href="/contact.html">Contact</a></p>
+        <p>&copy; 2026 GoGoPaschal. All rights reserved. | <a href="/privacy.html">Privacy Policy</a> | <a href="/contact.html">Contact</a></p>
     </footer>
 </body>
 </html>
